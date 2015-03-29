@@ -4,7 +4,7 @@
 </#macro>
 
 <#macro page_content>
-<h3 class="page-title">控件使用<small> &nbsp; JS 插件，使用注意事项，以及 JS 插件介绍......</small></h3>
+
 <div class="row">
 	<div class="col-md-10">
 		<div class="portlet light">
@@ -19,96 +19,134 @@
 				</div>
 			</div>
 			<div class="portlet-body">
-				<div class="doc-content" id="intro1">
-					<h3>1. 关于SMARTWEB</h3>
-					<p>Smartweb是一个轻量级的响应式设计前端框架，基于Bootstrp3和Jquery编写，模版技术采用Freemarker。</p>
-					<p>Smartweb面向 HTML5 开发，使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让 Web 应用更快速载入。</p>
+				<!-- BEGIN ALERTS -->
+				<div id="intro1" class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-cogs font-red-sunglo"></i>
+							<span class="caption-subject font-red-sunglo bold uppercase">Alerts</span>
+							<span class="caption-helper">警告例子...</span>
+						</div>
+						<div class="tools">
+							<a href="javascript:;" class="collapse" data-original-title="" title="">
+							</a>
+							<a href="javascript:;" class="reload" data-original-title="" title="">
+							</a>
+							<a href="javascript:;" class="remove" data-original-title="" title="">
+							</a>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<h4 class="block">缺省</h4>
+						<div class="alert alert-success">
+							<strong>Success!</strong> &nbsp;我就这样告别山下的家。
+						</div>
+						<div class="alert alert-info">
+							<strong>Info!</strong> 我实在不愿让眼泪轻易留下。
+						</div>
+						<div class="alert alert-warning">
+							<strong>Warning!</strong> 我以为我并不差不会害怕。
+						</div>
+						<div class="alert alert-danger">
+							<strong>Error!</strong> 我就这样自己照顾自己长大。
+						</div>
+						<h4 class="block">可关闭</h4>
+						<div class="alert alert-warning alert-dismissable">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+							<strong>Warning!</strong> 如果有一天我变得更复杂，还能不能唱出歌声里的那幅画。
+						</div>
+						<div class="doc-actions"><div class="doc-act-inner"><span>Copy</span></div></div>
+						<div class="doc-code">
+							<pre>
+&lt;div class="alert alert-success">
+    &lt;strong>Success!&lt;/strong> &nbsp;我就这样告别山下的家。
+&lt;/div><br>
+&lt;div class="alert alert-info">
+    &lt;strong>Info!&lt;/strong> &nbsp;我实在不愿让眼泪轻易留下。
+&lt;/div><br>
+&lt;div class="alert alert-warning">
+    &lt;strong>Warning!&lt;/strong> &nbsp;我以为我并不差不会害怕。
+&lt;/div><br>
+&lt;div class="alert alert-danger">
+    &lt;strong>Error!&lt;/strong> &nbsp;我就这样自己照顾自己长大。
+&lt;/div><br>
+&lt;div class="alert alert-warning alert-dismissable">
+    &lt;button type="button" class="close" data-dismiss="alert" aria-hidden="true">&lt;/button>
+    &lt;strong>Warning!&lt;/strong> &nbsp;如果有一天我变得更复杂，还能不能唱出歌声里的那幅画。
+&lt;/div>
+							</pre>
+						</div>
+					</div>
 				</div>
-				<div class="doc-content" id="intro2">
-				<h3>2. SMARTWEB目录结构</h3>
-
-				</pre>
-				</div>
-				<div class="doc-content" id="intro3">
-				<h3>3. 页面结构</h3>
-				
-				<blockquote>
-				<p>我不是专业的WEB前端工程师</p>
-				<p>复杂的 CSS 语法和 JS 对于我来说就是噩梦</p>
-				<p>除非你使用 Smartweb</p>
-				<p>会发现一切变的如此简单</p>
-				<small>Smartweb</small>
-				</blockquote>
-				
-				<p>Smartweb采用模版构造 jsp 页面，每个 jsp 页面都会继承自一个 Freemarker 模版（扩展名为 ftl 文件）。在模版文件中定义了页面的整体结构，并且定义了 3处 替换宏，
-				分别为 <span class="warning">page_style</span>、<span class="warning">page_content</span>、<span class="warning">page_script</span>。构建具体页面时候，只需要建立单独 jsp 页面，分别填充这 3处 内容就可以了。</p>
-				<p>采用模版结构的好处是，程序员只需要去做本页面的标签构建，而不需要去关心呈现在浏览器中的整个页面的内部结构，因为整个页面结构在模版文件中已经预先定义好了，一般不需要去变动。</p>
-				<p>下面模版结构：</p>
-				<div class="doc-actions"><div class="doc-act-inner"><span>Copy</span></div></div>
-				<div class="doc-code">
-					<pre>
-&lt!DOCTYPE html&gt
-&lthtml lang="en"&gt
-&lthead&gt
-&ltmeta charset="utf-8"/&gt
-&lttitle>Smartsky | ADMIN&lt/title&gt
-&ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
-&ltmeta content="width=device-width, initial-scale=1.0" name="viewport"/&gt
-&ltmeta http-equiv="Content-type" content="text/html; charset=utf-8"&gt
-...
-<<code class="code-warning">@page_style</code>/>
-&lt/head&gt
-&ltbody&gt
-...
-<<code class="code-warning">@page_content</code>/>
-...
-
-<<code class="code-warning">@page_script</code>/>
-&lt/body&gt
-&lt/html&gt
-  					</pre>
+				<!-- END ALERTS -->
+			
+				<!-- BEGIN NOTES -->
+				<div id="intro2" class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-cogs font-red-sunglo"></i>
+							<span class="caption-subject font-red-sunglo bold uppercase">Notes</span>
+							<span class="caption-helper">注释例子...</span>
+						</div>
+						<div class="tools">
+							<a href="javascript:;" class="collapse" data-original-title="" title="">
+							</a>
+							<a href="javascript:;" class="reload" data-original-title="" title="">
+							</a>
+							<a href="javascript:;" class="remove" data-original-title="" title="">
+							</a>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="note note-success">
+							<h4 class="block">Success! Some Header Goes Here</h4>
+							<p>
+								 我就这样告别山下的家，我实在不愿轻易让眼泪留下。我以为我并不差不会害怕，我就这样自己照顾自己长大。我不想因为现实把头低下，我以为我并不差能学会虚假。怎样才能够看穿面具里的谎话？别让我的真心散的像沙。如果有一天我变得更复杂，还能不能唱出歌声里的那幅画？
+							</p>
+						</div>
+						<div class="note note-info">
+							<h4 class="block">Info! Some Header Goes Here</h4>
+							<p>
+								 我就这样告别山下的家，我实在不愿轻易让眼泪留下。我以为我并不差不会害怕，我就这样自己照顾自己长大。我不想因为现实把头低下，我以为我并不差能学会虚假。怎样才能够看穿面具里的谎话？别让我的真心散的像沙。如果有一天我变得更复杂，还能不能唱出歌声里的那幅画？
+							</p>
+						</div>
+						<div class="note note-danger">
+							<h4 class="block">Danger! Some Header Goes Here</h4>
+							<p>
+								 我就这样告别山下的家，我实在不愿轻易让眼泪留下。我以为我并不差不会害怕，我就这样自己照顾自己长大。我不想因为现实把头低下，我以为我并不差能学会虚假。怎样才能够看穿面具里的谎话？别让我的真心散的像沙。如果有一天我变得更复杂，还能不能唱出歌声里的那幅画？
+							</p>
+						</div>
+						<div class="note note-warning">
+							<h4 class="block">Warning! Some Header Goes Here</h4>
+							<p>
+								 我就这样告别山下的家，我实在不愿轻易让眼泪留下。我以为我并不差不会害怕，我就这样自己照顾自己长大。我不想因为现实把头低下，我以为我并不差能学会虚假。怎样才能够看穿面具里的谎话？别让我的真心散的像沙。如果有一天我变得更复杂，还能不能唱出歌声里的那幅画？
+							</p>
+						</div>
+					</div>
 				</div>				
-				
-				</div>
-				<div class="doc-content" id="intro4">
-				<h3 id="#intro4">4. 创建一个页面</h3>
-				<ol>
-					<li><p>在 web-inf/view目录下面新建一个 jsp 文件，将下面的代码粘贴到文件中；</p></li>
-					<li><p>根据页面业务需求，查看 开发指南中 CSS、JS、JS 插件，拷贝符合的演示代码，粘贴到 ... 相对应的区域，并按需调整；</p></li>
-					<li><p>一个简单的页面完成。</p></li>
-					<li><p class="warning">注意：下面代码中的 $ 符号在实际代码中必须换成 #</p></li>
-				</ol>
-				<div class="doc-actions"><div class="doc-act-inner"><span>Copy</span></div></div>
-				<div class="doc-code">
-					<pre>
-<<code>#</code>include "../ftl/mnlayout.ftl">
-
-<<code>#</code>macro page_style>
-    <code class="code-comment">&lt!-- 在这里添加当前页面需要引用的css文件  --&gt</code>
-<<code>#</code>/macro>
-
-<<code>#</code>macro page_content>
-    <code class="code-comment">&lt!-- 在这里添加当前页面需要的标签内容  --&gt</code>
-<<code>#</code>/macro>
-
-<<code>#</code>macro page_script>
-    <code class="code-comment">&lt!-- 在这里添加当前页面需要引用js文件和js代码  --&gt</code>
-<<code>#</code>/macro>
-  					</pre>
-				</div>
-				</div>
+				<!-- END NOTES -->
 			</div>
-		</div>
-		
 	</div>
 	
 	<div class="col-md-2">
 		<div class="page-nav">
 			<ul id="nav">
-				<li class="current"><a href="#intro1">通用控件</a></li>
-				<li class=""><a href="#intro2">目录结构</a></li>
-				<li class=""><a href="#intro3">页面结构</a></li>
-				<li><a href="#intro4">建立页面</a></li>
+				<li class="current"><a href="#intro1"><i class="fa fa-gear"></i>  ALERTS</a></li>
+				<li><a href="#intro2"><i class="fa fa-gear"></i> NOTES</a></li>
+				<li><a href="#intro3"><i class="fa fa-gear"></i> Inline Notifications</a></li>
+				<li><a href="#intro4"><i class="fa fa-gear"></i> Progress Bars</a></li>
+				<li><a href="#intro5"><i class="fa fa-gear"></i> Pulsate</a></li>
+				<li><a href="#intro6"><i class="fa fa-gear"></i> Labels & Badges</a></li>
+				<li><a href="#intro7"><i class="fa fa-gear"></i> Modal Dialogs</a></li>
+				<li><a href="#intro8"><i class="fa fa-gear"></i> Tooltips</a></li>
+				<li><a href="#intro9"><i class="fa fa-gear"></i> Popovers</a></li>
+				<li><a href="#intro10"><i class="fa fa-gear"></i> List Groups</a></li>
+				<li><a href="#intro11"><i class="fa fa-gear"></i> Pagination</a></li>
+				<li><a href="#intro12"><i class="fa fa-gear"></i> Dynamic Pagination</a></li>
+				<li><a href="#intro13"><i class="fa fa-gear"></i> Panels</a></li>
+				<li><a href="#intro14"><i class="fa fa-gear"></i> Wells</a></li>
+				<li><a href="#intro15"><i class="fa fa-gear"></i> Media Objects</a></li>
+				<li><a href="#intro16"><i class="fa fa-gear"></i> Thumbnails</a></li>
 			</ul>
 		</div>
 	</div>

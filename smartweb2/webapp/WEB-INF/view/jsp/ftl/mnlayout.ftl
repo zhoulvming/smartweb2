@@ -243,7 +243,7 @@
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img alt="" class="img-circle" src="${BASEPATH}assets/admin/layout/img/avatar3_small.jpg"/>
 						<span class="username username-hide-on-mobile">
-						ZLM </span>
+						COB </span>
 						<i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-default">
@@ -298,7 +298,8 @@
 		<div class="page-sidebar-wrapper">
 			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
 			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<div class="page-sidebar navbar-collapse collapse">
+			<!-- <div class="page-sidebar navbar-collapse collapse"> -->
+			<div class="page-sidebar">
 				<!-- BEGIN SIDEBAR MENU -->
 				<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
 				<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
@@ -310,26 +311,26 @@
 					<li class="start active">
 						<a href="${BASEPATH}dashboard/start">
 						<!-- <i class="icon-home"></i> -->
-						<i class="fa fa-book"></i>
+						<i class="icon-rocket"></i>
 						<span class="title">开始使用</span>
 						<span class="selected"></span>
 						</a>
 					</li>
 					<li>
 						<a href="javascript:;">
-							<i class="icon-folder"></i>
-							<span class="title">使用控件</span>
+							<i class="icon-magnet"></i>
+							<span class="title">UI Features</span>
 							<span class="arrow"></span>
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="javascript:;">
-									<i class="icon-settings"></i> 通用 <span class="arrow"></span>
+								<a href="${BASEPATH}dashboard/control">
+									<i class="icon-tag"></i> 通用 <span class="arrow"></span>
 								</a>
 							</li>
 							<li>
 								<a href="javascript:;">
-									<i class="icon-settings"></i> 版面设计 <span class="arrow"></span>
+									<i class="icon-tag"></i> 版面设计 <span class="arrow"></span>
 								</a>
 							</li>
 						</ul>

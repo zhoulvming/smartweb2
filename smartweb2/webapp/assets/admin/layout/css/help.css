@@ -50,9 +50,9 @@
 
 .page-nav {
 	position: fixed;
-	right: 30px;
+	right: 20px;
 	top: 90px;
-	font: 14px Tahoma,Helvetica,Arial,"宋体";
+	font: 14px Tahoma,Helvetica,Arial,"微软雅黑";
 }
 
 .page-nav ul {
@@ -64,6 +64,10 @@
 	margin-bottom: 2px;
 	padding-left: 0;
 }
+.page-nav ul li>a:hover {
+	background:#999 !important;
+	color: #fff;
+}
 
 .page-nav li.current a {
 	color: #ededed;
@@ -72,11 +76,12 @@
 
 .page-nav a {
 	display: block;
-	padding: 5px 20px;
+	padding: 5px 20px 5px 10px;
 	color: #666;
 	text-align: left;
 	background-color: #ededed;
 	text-decoration: none;
+	font-size: .8em;
 }
 
 blockquote p {
@@ -119,7 +124,6 @@ blockquote small {
 	padding:3px 8px;
 	display:inline-block;
 	font-family: FontAwesome,sans-serif;
-	font-weight: 400;
 	font-style: normal;
 	vertical-align: baseline;
 	line-height: 1;
@@ -132,28 +136,14 @@ blockquote small {
 }
 
 .doc-code {
+	position:relative;
 	word-wrap: break-word;
 	font-size:1.4rem
-	position:relative;
 }
-
-.doc-code::after {
-	position: absolute;
-	right: 5px;
-	bottom: 5px;
-	color: #ccc;
-	display: inline-block;
-	font-family: FontAwesome,sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	vertical-align: baseline;
-	line-height: 1;
-	font-size: inherit;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	transform: translate(0,0);
+.doc-code pre {
+	color: #777;
+	font-weight: 100;
 }
-
 
 pre code {
 	border: 0 !important;

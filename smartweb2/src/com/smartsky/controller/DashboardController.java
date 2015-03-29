@@ -16,5 +16,9 @@ public class DashboardController {
 	@RequestMapping(value="/start", method=RequestMethod.GET)
 	public String layout( HttpServletRequest req) {
 		return "dashboard/start";
-	}	
+	}
+	@RequestMapping(value="/control", method=RequestMethod.GET)
+	public String control( HttpServletRequest req) {
+		return "dashboard/control";
+	}
 }

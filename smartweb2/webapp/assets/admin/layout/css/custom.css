@@ -1,6 +1,4 @@
-/* 此处放置自定义及覆盖插件css的样式定义 */
-
-/* jquery.dataTables.css文件中的21处样式 */
+/* jquery.dataTables.css#21式 */
 table.dataTable thead th,
 table.dataTable thead td {
   padding: 10px 10px !important;
