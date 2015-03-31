@@ -16,6 +16,7 @@ public class SmartRequestContextListener extends RequestContextListener {
 				+ request.getServerName() + ":" + request.getServerPort()
 				+ path + "/";
 		request.setAttribute("BASEPATH", basePath);
+		request.setAttribute("PATHINFO", basePath); 
 		
 	}
 

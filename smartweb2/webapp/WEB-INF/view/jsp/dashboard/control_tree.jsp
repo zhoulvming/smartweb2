@@ -356,6 +356,7 @@
 	
 	
 	$(document).ready(function(){
+		
 		$('.theme-panel').addClass('hide');
 		$('#nav').onePageNav();
 		
