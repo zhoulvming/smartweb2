@@ -23,6 +23,18 @@
 					<h3>1. 关于SMARTWEB</h3>
 					<p>Smartweb是一个轻量级的响应式设计前端框架，基于Bootstrp3和Jquery编写，模版技术采用Freemarker。</p>
 					<p>Smartweb面向 HTML5 开发，使用 CSS3 来做动画交互，平滑、高效，更适合移动设备，让 Web 应用更快速载入。</p>
+					<p><strong>Smartweb特色：</strong></p>
+					<ol>
+						<li><p class="font-red">基于 Bootstrap3.3 构造</p></li>
+						<li><p class="font-red">所有应用到的JQUERY插件都是基于官方开源代码构建</p></li>
+						<li><p class="font-red">框架中定义的各种组件达几十种，完全满足WEB项目开发需求</p></li>
+						<li><p class="font-red">支持所有主流浏览器，特别针对IE8（包括IE8）浏览器做了适配</p></li>
+						<li><p class="font-red">扁平化及响应式设计，一份代码适配于各种设备（PC、笔记本、PAD、手机）</p></li>
+						<li><p class="font-red">模版可无编码变换主题和风格，以适用不同用户需求</p></li>
+						<li><p class="font-red">代码在模版中编写，风格统一，对调试和维护有很大好处</p></li>
+						<li><p class="font-red">程序员只需针对当前页面的需求来编写代码，编码效率极大得到提升</p></li>
+					</ol>
+					
 				</div>
 				<div class="doc-content" id="intro2">
 				<h3>2. SMARTWEB目录结构</h3>

@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Smartsky | ADMIN</title>
+<title>&nbsp;SMARTWEB</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -58,7 +58,7 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="${BASEPATH}dashboard/index">
+			<a href="${BASEPATH}">
 				<img src="${BASEPATH}assets/admin/layout/img/logo-default.png" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler"></div>
@@ -324,20 +324,58 @@
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="${BASEPATH}dashboard/control">
-									<i class="icon-tag"></i> 通用 <span class="arrow"></span>
+								<a href="${BASEPATH}dashboard/control/general">
+									<i class="icon-tag font-yellow"></i> General
 								</a>
 							</li>
 							<li>
-								<a href="javascript:;">
-									<i class="icon-tag"></i> 版面设计 <span class="arrow"></span>
+								<a href="${BASEPATH}dashboard/control/tree">
+									<i class="icon-tag font-yellow"></i> TreeView
 								</a>
 							</li>
+							<li>
+								<a href="${BASEPATH}dashboard/control/button">
+									<i class="icon-tag font-yellow"></i> Buttons
+								</a>
+							</li>
+							<li>
+								<a href="${BASEPATH}dashboard/control/font">
+									<i class="icon-tag font-yellow"></i> Fonts&Icons
+								</a>
+							</li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Flat UI Colors</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Typography(排版)</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Modals</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Tabs & Navs </a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Bootbox Dialogs</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Tiles(瓷砖)</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Toastr Notifications</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Growl Notifications</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Nestable List </a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Session Timeout</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Block UI</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Page Progress Bar</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Alerts&Dialogs API</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Sliders</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Knob Circle Dials</a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="javascript:;">
-							<i class="icon-folder"></i>
+							<i class="icon-wallet"></i>
+							<span class="title">Portlets</span>
+							<span class="arrow"></span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="javascript:;"><i class="icon-tag"></i> General Portlets</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> News Portlets</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Ajax Portlets</a></li>
+							<li><a href="javascript:;"><i class="icon-tag"></i> Draggable Portlets</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="icon-docs"></i>
 							<span class="title">页面示例</span>
 							<span class="arrow"></span>
 						</a>
@@ -361,7 +399,7 @@
 					</li>					
 					<li class="">
 						<a href="javascript:;">
-						<i class="icon-basket"></i>
+						<i class="icon-paper-plane"></i>
 						<span class="title">后台开发</span>
 						<span class="selected"></span>
 						<span class="arrow open"></span>
@@ -369,12 +407,12 @@
 						<ul class="sub-menu">
 							<li>
 								<a href="javascript:;">
-								<i class="icon-home"></i>
+								<i class="icon-tag"></i>
 								传值方法</a>
 							</li>
 							<li>
 								<a href="javascript:;">
-								<i class="icon-basket"></i>
+								<i class="icon-tag"></i>
 								数据库操作</a>
 							</li>
 							<li>
@@ -386,7 +424,7 @@
 					</li>
 					<li class="last ">
 						<a href="javascript:;">
-						<i class="icon-rocket"></i>
+						<i class="icon-note"></i>
 						<span class="title">开发示例</span>
 						<span class="arrow "></span>
 						</a>

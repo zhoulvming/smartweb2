@@ -1,0 +1,111 @@
+/***
+Welcome Page
+***/
+body {
+  	background-color: #ddd;
+  	padding: 0;
+  	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+.welcome-page-title {
+	margin: 10px 0 10px 0;
+	font-size: 5em;
+	letter-spacing: -1px;
+	font-weight: 700;
+	color: #fff;
+	text-align:center;
+}
+.welcome-page-description {
+    -webkit-animation: fade-in-down 0.9s;
+    -o-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s;
+    -webkit-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    color: #aaa;
+    text-align:center;
+}
+
+.welcome-header {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.welcome-content {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.welcome-content .callto {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.welcome-content .callto a {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: inline-block;
+	padding: 10px 45px;
+	border: 0;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	text-transform: uppercase;
+	line-height: 35px;
+	white-space: nowrap;
+	border-radius: 3px;
+	-webkit-transition: all ease 0.3s;
+	     -o-transition: all ease 0.3s;
+	        transition: all ease 0.3s;
+	border-radius: 2px;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+
+.welcome-content h1,
+.welcome-content p {
+  color: #fff;
+}
+
+.welcome-content h1 {
+  line-height: 50px;
+  margin-bottom: 15px;
+}
+
+.welcome-content p {
+  font-size: 13px;
+}
+
+.welcome-footer {
+	position: absolute;
+	bottom: 20px;
+  text-align: right !important;
+  font-size: 12px;
+  color: #fefefe;
+  padding: 20px 20px 20px 20px;
+}
+
+
+
+/*Responsive*/
+@media (max-width: 1024px) {
+  #defaultCountdown span.countdown_amount {
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .welcome-header,
+  .welcome-countdown,
+  .welcome-content,
+  .welcome-footer {
+    margin-top: 0px;
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .welcome-content .btn-subscribe span {
+    display: none;
+  }
+}

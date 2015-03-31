@@ -1,4 +1,4 @@
-package com.smartsky.service;
+package com.smartsky.service.impl;
 
 
 import java.util.List;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.smartsky.dao.UserMapper;
 import com.smartsky.model.User;
+import com.smartsky.service.UserServiceI;
 
 @Service("userService")
 public class UserServiceImpl implements UserServiceI {

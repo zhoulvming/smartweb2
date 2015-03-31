@@ -1,0 +1,6 @@
+[
+	{"id":"node_142770757654159","text":"Node #1","icon":"fa fa-folder icon-lg icon-state-warning","children":true,"type":"root"},
+	{"id":"node_142770757644160","text":"Node #2","icon":"fa fa-folder icon-lg icon-state-success","children":true,"type":"root"},
+	{"id":"node_142770757671387","text":"Node #3","icon":"fa fa-folder icon-lg icon-state-danger","children":true,"type":"root"},
+	{"id":"node_142770757638501","text":"Node #4","icon":"fa fa-folder icon-lg icon-state-danger","children":true,"type":"root"}
+]
