@@ -74,8 +74,8 @@
 					<div id="layout_portlet_title" class="portlet-title">
 						<div class="caption">
 							<i class="icon-home bold font-green"></i>
-							<span class="caption-subject bold uppercase font-green"> 首页</span>
-							<span class="caption-helper"></span>
+							<span id="page_name" class="caption-subject bold uppercase font-green"> 首页</span>
+							<span id="page_caption" class="caption-helper"></span>
 						</div>
 						<div class="actions">
 							<a id="fullscreen_icon" class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;"></a>

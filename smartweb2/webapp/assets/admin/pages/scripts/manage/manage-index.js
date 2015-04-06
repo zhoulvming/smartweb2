@@ -121,6 +121,8 @@ var ManageIndex = function () {
     return {
         // main function to initiate the module
         init: function () {
+        	$('#page_name').text('管理');
+        	$('#page_caption').text('我的报告／管理');
         },
         
         // return jsondata
