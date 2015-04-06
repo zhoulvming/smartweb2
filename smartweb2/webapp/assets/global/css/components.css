@@ -39,14 +39,31 @@ li {
 /***
 General reset
 ***/
+
 /* Set default body */
 body {
-  color: #333333;
-  font-family: "Open Sans", sans-serif;
-  padding: 0px !important;
-  margin: 0px !important;
-  font-size: 13px;
-  direction: ltr;
+	color: #333333;
+/*   font-family: "Open Sans", sans-serif; */
+	font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
+	padding: 0px !important;
+	margin: 0px !important;
+	font-size: 13px;
+	direction: ltr;
+}
+
+/**/
+body,
+input,
+textarea,
+select,
+button {
+  text-rendering: optimizeLegibility;
+  /* 1 */
+  -webkit-font-smoothing: antialiased;
+  /* 2 */
+  -moz-osx-font-smoothing: grayscale;
+  /* 3 Default: auto */
+  -moz-font-feature-settings: "liga", "kern";
 }
 
 /*
@@ -955,7 +972,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
   font-weight: 300;
 }
 
@@ -4707,7 +4725,7 @@ Portlets
 
 /* Solid colored portlet */
 .portlet.solid {
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 0px 10px;
   border: 0px;
 }
 .portlet.solid > .portlet-title {
@@ -13688,4 +13706,65 @@ Transparent Button
 .btn-transparent.btn {
   background: transparent;
   color: #888;
+}
+
+/***
+EasyUI treegird override style
+font1:FontAwesome 
+font2:Glyphicons Halflings
+font3:Simple-Line-Icons
+***/
+.tree-file, 
+.tree-folder, 
+.tree-folder-open,
+.tree-collapsed,
+.tree-expanded {
+  font: normal normal normal 14px/1 FontAwesome;
+  background: none !important;
+  padding: 2px !important;
+}
+.tree-file, 
+.tree-folder, 
+.tree-folder-open {
+	color: #8cacc3;
+}
+.tree-collapsed,
+.tree-expanded {
+	color: #999;
+}
+
+.tree-file:before {
+	content: "\f15b";
+}
+.tree-folder:before {
+	content: "\f07b";
+}
+.tree-folder-open:before {
+	content: "\f07c";
+}
+.tree-collapsed:before {
+	content: "\f196";
+	
+}
+.tree-expanded:before {
+	content: "\f147";
+}
+.datagrid-row-selected {
+	background: #ddd !important;
+}
+.panel-header, .panel-body {
+	border-color: #ccc !important;
+}
+.datagrid-header,
+.datagrid-td-rownumber {
+	background: #eee !important;
+  	background-color: #eee !important;
+}
+.datagrid-header-row {
+	/* color: #fff; */
+	font-weight: 300;
+}
+.datagrid-header-over {
+	color: #fff !important;
+	background: #ccc !important;
 }

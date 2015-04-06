@@ -50,6 +50,7 @@ var Layout = function() {
 
     // Handle sidebar menu links
     var handleSidebarMenuActiveLink = function(mode, el) {
+    	
         var url = location.hash.toLowerCase();    
 
         var menu = $('.page-sidebar-menu');
@@ -116,8 +117,9 @@ var Layout = function() {
     // Handle sidebar menu
     var handleSidebarMenu = function() {
         $('.page-sidebar').on('click', 'li > a', function(e) {
-
-            if (Smartweb.getViewPort().width >= resBreakpointMd && $(this).parents('.page-sidebar-menu-hover-submenu').size() === 1) { // exit of hover sidebar menu
+        	
+        	 // exit of hover sidebar menu
+            if (Smartweb.getViewPort().width >= resBreakpointMd && $(this).parents('.page-sidebar-menu-hover-submenu').size() === 1) {
                 return;
             }
 
@@ -437,7 +439,7 @@ var Layout = function() {
 
     // Handles the go to top button at the footer
     var handleGoTop = function() {
-        var offset = 300;
+        var offset = 50;
         var duration = 500;
 
         if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) { // ios supported

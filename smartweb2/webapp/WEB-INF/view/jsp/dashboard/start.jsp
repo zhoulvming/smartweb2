@@ -1,16 +1,20 @@
 <#include "../ftl/mnlayout.ftl">
 <#macro page_style>
-<link href="${BASEPATH}assets/admin/layout/css/help.css" rel="stylesheet" type="text/css"/>
+<link href="${BASEPATH}assets/admin/layout/css/helper.css" rel="stylesheet" type="text/css"/>
 </#macro>
 
 <#macro page_content>
 <h3 class="page-title">开始使用<small> &nbsp;SMARTWEB概览，使用，模版示例......</small></h3>
+
+
+
 <div class="row">
 	<div class="col-md-10">
 		<div class="portlet light">
 			<div class="portlet-title">
 				<div class="caption font-purple-plum">
 					<i class="icon-speech font-purple-plum"></i>
+					<ul class="page-breadcrumb">
 					<span class="caption-subject bold uppercase"> SMARTWEB 简介</span>
 					<span class="caption-helper"></span>
 				</div>
@@ -38,15 +42,17 @@
 				</div>
 				<div class="doc-content" id="intro2">
 				<h3>2. SMARTWEB目录结构</h3>
-					<pre>Smartweb
+					<pre class="language-smartweb">
+						<code class="language-smartweb">
+Smartweb
 |-- assets
 |   |-- admin
 |   |   |-- layout
 |   |   |   |-- css
-|   |   |   |   `-- layout.css		<small class="text-muted">//框架样式主文件</small>
+|   |   |   |   `-- layout.css		<span class="token comment">//框架样式主文件</span>
 |   |   |   |   `-- custom.css
 |   |   |   |   `-- fixie.css
-|   |   |   |   |-- themes		<small class="text-muted">//不同主题颜色的模版样式</small>
+|   |   |   |   |-- themes		<span class="token comment">//不同主题颜色的模版样式</span>
 |   |   |   |   |   `-- default.css
 |   |   |   |   |   `-- dark.css
 |   |   |   |   |   `-- grey.css
@@ -54,8 +60,8 @@
 |   |   |   |   |   `-- light.css
 |   |   |   |-- img
 |   |   |   |-- scripts
-|   |   |   |   `-- layout.js		<small class="text-muted">//框架布局JS</small>
-|   |   |   |   `-- project.js		<small class="text-muted">//项目主JS</small>
+|   |   |   |   `-- layout.js		<span class="token comment">//框架布局JS</span>
+|   |   |   |   `-- project.js		<span class="token comment">//项目主JS</span>
 |   |   |-- pages
 |   |   |
 |   |-- global
@@ -63,19 +69,20 @@
 |   |   |   `-- components.css
 |   |   |   `-- google-font.css
 |   |   |   `-- plugins.css
-|   |   |-- fonts			<small class="text-muted">//存放google-font.css引用的字体</small>
+|   |   |-- fonts			<span class="token comment">//存放google-font.css引用的字体</span>
 |   |   |-- img
-|   |   |-- plugins			<small class="text-muted">//基于jquery及bootstrap的各种插件</small>
+|   |   |-- plugins			<span class="token comment">//基于jquery及bootstrap的各种插件</span>
 |   |   |-- scripts
-|   |       `-- smartweb.js		<small class="text-muted">//框架主引导JS</small>
+|   |       `-- smartweb.js		<span class="token comment">//框架主引导JS</span>
 |   |
 |-- WEB-INF
     |-- view
         |-- ftl
-        |   `-- mnlayout.ftl		<small class="text-muted">//模版文件</small>
+        |   `-- mnlayout.ftl		<span class="token comment">//模版文件</span>
         |-- user
-            `-- list.jsp		<small class="text-muted">//业务画面</small>
+            `-- list.jsp		<span class="token comment">//业务画面</span>
             `-- edit.jsp
+					</code>
 				</pre>
 				</div>
 				<div class="doc-content" id="intro3">
@@ -90,60 +97,60 @@
 				</blockquote>
 				
 				<p>Smartweb采用模版构造 jsp 页面，每个 jsp 页面都会继承自一个 Freemarker 模版（扩展名为 ftl 文件）。在模版文件中定义了页面的整体结构，并且定义了 3处 替换宏，
-				分别为 <span class="warning">page_style</span>、<span class="warning">page_content</span>、<span class="warning">page_script</span>。构建具体页面时候，只需要建立单独 jsp 页面，分别填充这 3处 内容就可以了。</p>
+				分别为 <code class="language-smartweb">page_style</code>、<code class="language-smartweb">page_content</code>、<code class="language-smartweb">page_script</code>。构建具体页面时候，只需要建立单独 jsp 页面，分别填充这 3处 内容就可以了。</p>
 				<p>采用模版结构的好处是，程序员只需要去做本页面的标签构建，而不需要去关心呈现在浏览器中的整个页面的内部结构，因为整个页面结构在模版文件中已经预先定义好了，一般不需要去变动。</p>
 				<p>下面模版结构：</p>
 				<div class="doc-actions"><div class="doc-act-inner"><span>Copy</span></div></div>
 				<div class="doc-code">
-					<pre>
-&lt!DOCTYPE html&gt
-&lthtml lang="en"&gt
-&lthead&gt
-&ltmeta charset="utf-8"/&gt
-&lttitle>Smartsky | ADMIN&lt/title&gt
-&ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
-&ltmeta content="width=device-width, initial-scale=1.0" name="viewport"/&gt
-&ltmeta http-equiv="Content-type" content="text/html; charset=utf-8"&gt
+					<pre class="language-smartweb"><code class="language-smartweb">
+&lt!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;title>Smartsky | ADMIN&lt/title&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"/&gt;
+&lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
 ...
-<<code class="code-warning">@page_style</code>/>
-&lt/head&gt
-&ltbody&gt
+<span class="token variable">&lt;@page_style/&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
 ...
-<<code class="code-warning">@page_content</code>/>
+<span class="token variable">&lt;@page_content/&gt;</span>
 ...
 
-<<code class="code-warning">@page_script</code>/>
-&lt/body&gt
-&lt/html&gt
-  					</pre>
+<span class="token variable">&lt;@page_script/&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+  					</code></pre>
 				</div>				
 				
 				</div>
 				<div class="doc-content" id="intro4">
 				<h3 id="#intro4">4. 创建一个页面</h3>
 				<ol>
-					<li><p>在 web-inf/view目录下面新建一个 jsp 文件，将下面的代码粘贴到文件中；</p></li>
+					<li><p>在 <code class="language-smartweb">web-inf/view</code>目录下面新建一个 jsp 文件，将下面的代码粘贴到文件中；</p></li>
 					<li><p>根据页面业务需求，查看 开发指南中 CSS、JS、JS 插件，拷贝符合的演示代码，粘贴到 ... 相对应的区域，并按需调整；</p></li>
 					<li><p>一个简单的页面完成。</p></li>
 					<li><p class="warning">注意：下面代码中的 $ 符号在实际代码中必须换成 #</p></li>
 				</ol>
 				<div class="doc-actions"><div class="doc-act-inner"><span>Copy</span></div></div>
 				<div class="doc-code">
-					<pre>
-<<code>#</code>include "../ftl/mnlayout.ftl">
+					<pre class="language-smartweb"><code class="language-smartweb">
+&lt;#include "../ftl/mnlayout.ftl"&gt;
 
-<<code>#</code>macro page_style>
-    <code class="code-comment">&lt!-- 在这里添加当前页面需要引用的css文件  --&gt</code>
-<<code>#</code>/macro>
+&lt;#macro page_style&gt;
+    <span class="token comment">&lt;!-- 在这里添加当前页面需要引用的css文件  --&gt;</span>
+&lt;#/macro&gt;
 
-<<code>#</code>macro page_content>
-    <code class="code-comment">&lt!-- 在这里添加当前页面需要的标签内容  --&gt</code>
-<<code>#</code>/macro>
+&lt;#macro page_content&gt;
+    <span class="token comment">&lt;!-- 在这里添加当前页面需要的标签内容  --&gt;</span>
+&lt;#/macro&gt;
 
-<<code>#</code>macro page_script>
-    <code class="code-comment">&lt!-- 在这里添加当前页面需要引用js文件和js代码  --&gt</code>
-<<code>#</code>/macro>
-  					</pre>
+&lt;#macro page_script&gt;
+    <span class="token comment">&lt;!-- 在这里添加当前页面需要引用js文件和js代码  --&gt;</span>
+&lt;#/macro&gt;
+  					</code></pre>
 				</div>
 				</div>
 			</div>

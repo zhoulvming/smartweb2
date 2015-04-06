@@ -10,7 +10,7 @@
 		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
 		<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
 		<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+		<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu page-sidebar-menu-compact" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 			<li class="start">
 				<a href="${BASEPATH}dashboard/start">
 				<!-- <i class="icon-home"></i> -->
@@ -29,11 +29,6 @@
 					<li>
 						<a href="${BASEPATH}dashboard/control/general">
 							<i class="icon-tag font-yellow"></i> General
-						</a>
-					</li>
-					<li>
-						<a href="${BASEPATH}dashboard/control/tree">
-							<i class="icon-tag font-yellow"></i> TreeView
 						</a>
 					</li>
 					<li>
@@ -61,6 +56,16 @@
 					<li><a href="javascript:;"><i class="icon-tag"></i> Alerts&Dialogs API</a></li>
 					<li><a href="javascript:;"><i class="icon-tag"></i> Sliders</a></li>
 					<li><a href="javascript:;"><i class="icon-tag"></i> Knob Circle Dials</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<i class="icon-puzzle"></i>
+					<span class="title">UI Components</span>
+					<span class="arrow"></span>
+				</a>
+				<ul class="sub-menu">
+					<li><a href="${BASEPATH}dashboard/component/tree"><i class="icon-tag"></i> TreeView</a></li>
 				</ul>
 			</li>
 			<li>

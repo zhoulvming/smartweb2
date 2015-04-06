@@ -57,6 +57,7 @@
 			<h2 class="welcome-page-description">WEB前端代码不再是伤痛. 您可以每天愉悦的编程 &amp; 享受新鲜的空气.</h2>
 			<div class="callto">
 				<a href="${BASEPATH}dashboard/start" class="btn btn-lg blue m-icon-big">开始使用</a>
+				<a href="${BASEPATH}home" class="btn btn-lg blue m-icon-big">3DHAND</a>
 			</div>
 		</div>
 	</div>

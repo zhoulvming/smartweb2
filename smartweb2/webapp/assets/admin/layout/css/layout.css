@@ -78,7 +78,7 @@ Page Header
   float: left;
   display: block;
   width: 195px;
-  height: 68px;
+  height: 48px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -88,7 +88,7 @@ Page Header
   float: left;
 }
 .page-header.navbar .page-logo .logo-default {
-  margin: 27px 0 0 0;
+  margin: 17px 0 0 0;
 }
 .page-header.navbar .page-logo .logo-mini {
   display: none;
@@ -99,11 +99,11 @@ Page Header
   padding-top: 12px;
 }
 .page-header.navbar .page-top {
-  height: 68px;
+  height: 48px;
   background: #BAC0B6;
 }
 .page-header.navbar .search-form {
-  margin-left: 10px;
+  margin-left: 5px;
   display: inline-block;
   width: 68px;
   position: relative;
@@ -111,7 +111,7 @@ Page Header
   transition: all 0.6s;
 }
 .page-header.navbar .search-form .input-group .form-control {
-  height: 68px;
+  height: 46px;
   border: 0;
   background: transparent !important;
   font-size: 14px;
@@ -123,7 +123,7 @@ Page Header
   cursor: pointer;
 }
 .page-header.navbar .search-form .input-group .input-group-btn {
-  height: 68px;
+  height: 46px;
 }
 .page-header.navbar .search-form .input-group .input-group-btn .btn.submit {
   margin-left: -24px;
@@ -166,7 +166,7 @@ Page Header
 }
 .page-header.navbar .menu-toggler.sidebar-toggler {
   float: right;
-  margin: 23px 0 0 0;
+  margin: 13px 0 0 0;
 }
 .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .menu-toggler.sidebar-toggler {
   margin-right: 17px;
@@ -210,7 +210,7 @@ Page Header
 .page-header.navbar .top-menu .navbar-nav > li.dropdown {
   margin: 0px;
   padding: 0px;
-  height: 68px;
+  height: 48px;
   display: inline-block;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown:last-child {
@@ -218,7 +218,8 @@ Page Header
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle {
   margin: 0px;
-  padding: 28px 16px 19px 16px;
+  /* padding: 28px 16px 19px 16px; */
+  padding: 18px 16px 9px 16px;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle:last-child {
   padding-right: 0;
@@ -233,7 +234,7 @@ Page Header
 .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle > .badge {
   font-family: "Open Sans", sans-serif;
   position: absolute;
-  top: 17px;
+  top: 8px;
   right: 9px;
   font-weight: 300;
   padding: 3px 6px;
@@ -421,7 +422,8 @@ Page Header
   padding: 0 0 0 10px;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
-  padding: 24px 12px 24px 12px;
+  /* padding: 24px 12px 24px 12px; */
+  padding: 13px 12px 15px 12px;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username {
   display: inline-block;
@@ -778,7 +780,7 @@ Page container
   clear: both;
 }
 .page-header-fixed .page-container {
-  margin-top: 68px;
+  margin-top: 48px;
 }
 .page-footer-fixed.page-footer-fixed-mobile .page-container {
   margin-bottom: 20px !important;
@@ -868,7 +870,7 @@ Page sidebar
   border: 0px;
   padding: 17px 15px 15px 15px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   text-align: center;
 }
@@ -907,13 +909,13 @@ Page sidebar
 }
 .page-sidebar .page-sidebar-menu > li.open > a,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.open > a {
-  font-size: 13px;
+  font-size: 16px;
 }
 .page-sidebar .page-sidebar-menu > li.active > a,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a {
   border: none;
   text-shadow: none;
-  font-size: 13px;
+  font-size: 16px;
 }
 .page-sidebar .page-sidebar-menu > li.active > a > .selected,
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a > .selected {
@@ -993,7 +995,7 @@ Page sidebar
   margin: 0;
   padding: 9px 15px 9px 15px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   background: none;
 }
@@ -1120,7 +1122,7 @@ Page sidebar
   .page-sidebar-fixed .page-sidebar {
     position: fixed !important;
     margin-left: 0;
-    top: 68px;
+    top: 48px;
   }
   .page-sidebar-fixed .page-sidebar-menu > li.last {
     margin-bottom: 15px !important;
@@ -1549,7 +1551,8 @@ Page content
   background-color: #fff;
 }
 .page-container-bg-solid .page-content {
-  background: #F1F3FA;
+  /* background: #F1F3FA; */
+  background: #fff;/*#d4dce0*/
 }
 .page-full-width .page-content {
   margin-left: 0px !important;

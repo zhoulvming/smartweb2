@@ -62,7 +62,7 @@ public class DashboardController {
 		if (name.equals("genernal")) {
 			target = "dashboard/control_general";
 		} else if (name.equals("tree")) {
-			target = "dashboard/control_tree";
+			target = "dashboard/component_tree";
 		} else if (name.equals("button")) {
 			target = "dashboard/control_button";
 		} else if (name.equals("font")) {
@@ -71,6 +71,20 @@ public class DashboardController {
 		
 		return target;
 	}
+	
+	@RequestMapping(value="/component/{name}", method=RequestMethod.GET)
+	public String component( @PathVariable String name, HttpServletRequest req) {
+		String target = "";
+		if (name.equals("tree")) {
+			target = "dashboard/component_tree";
+		} else if (name.equals("tree")) {
+		} else if (name.equals("button")) {
+		} else if (name.equals("font")) {
+		}
+		
+		return target;
+	}
+		
 	
 	
 	@RequestMapping(value="/jstree/ajax", method=RequestMethod.GET)

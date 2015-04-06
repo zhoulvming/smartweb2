@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>3DHandbook</title>
+<title>SMARTWEB--开发指南</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -115,7 +115,7 @@
 		
 		// reset sidebar status
 		var context_path = '${PATHINFO}';
-		alert(context_path);
+		//alert(context_path);
 		//.page-sidebar-menu li
 		
     });

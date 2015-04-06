@@ -16,7 +16,7 @@
 		<!-- END RESPONSIVE MENU TOGGLER -->
 		<!-- BEGIN PAGE ACTIONS -->
 		<!-- DOC: Remove "hide" class to enable the page header actions -->
-		<div class="page-actions">
+		<div class="page-actions hide">
 			<div class="btn-group">
 				<button type="button" class="btn btn-circle green-haze dropdown-toggle" data-toggle="dropdown">
 				<span class="hidden-sm hidden-xs">常用功能&nbsp;</span>&nbsp;<i class="fa fa-angle-down"></i>
@@ -58,7 +58,7 @@
 					<!-- BEGIN INBOX DROPDOWN -->
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
 						<i class="icon-envelope-open"></i>
 						<span class="badge badge-default">
 						4 </span>
@@ -134,7 +134,7 @@
 					<!-- BEGIN TODO DROPDOWN -->
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="header_task_bar">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"  data-close-others="true">
 						<i class="icon-calendar"></i>
 						<span class="badge badge-default">
 						3 </span>
@@ -187,7 +187,7 @@
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-user dropdown-dark">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"  data-close-others="true">
 						<img alt="" class="img-circle" src="${BASEPATH}assets/admin/layout/img/avatar3_small.jpg"/>
 						<span class="username username-hide-on-mobile">
 						COB </span>

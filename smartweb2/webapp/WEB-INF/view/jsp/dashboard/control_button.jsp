@@ -1,6 +1,6 @@
 <#include "../ftl/mnlayout.ftl">
 <#macro page_style>
-<link href="${BASEPATH}assets/admin/layout/css/help.css" rel="stylesheet" type="text/css"/>
+<link href="${BASEPATH}assets/admin/layout/css/helper.css" rel="stylesheet" type="text/css"/>
 </#macro>
 
 <#macro page_content>
@@ -19,25 +19,96 @@
 				</div>
 			</div>
 			<div class="portlet-body">
+				<h4>基本使用</h4>
+				<p>在要应用按钮样式的元素上添加 <code class="token scope">.btn</code>，再设置相应的颜色和大小。以下样式可用于&lt;a&gt;, &lt;button&gt;, 或 &lt;input&gt; 元素上：</p>
+				<table class="table table-striped table-bordered table-advance table-hover">
+					<thead><tr><th>类</th><th>描述</th></tr></thead>
+					<tbody>
+						<tr>
+							<td><code class="token scope">.btn</code></td>
+							<td>添加按钮基本样式</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-default</code></td>
+							<td>默认/标准按钮</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-primary</code></td>
+							<td>原始按钮样式（未被操作）</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-success</code></td>
+							<td>表示成功的动作</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-info</code></td>
+							<td>该样式可用于要弹出信息的按钮</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-warning</code></td>
+							<td>表示需要谨慎操作的按钮</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-danger</code></td>
+							<td>表示一个危险动作的按钮操作</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-link</code></td>
+							<td>让按钮看起来像个链接 (仍然保留按钮行为)</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.disabled</code></td>
+							<td>禁用按钮</td>
+						</tr>
+						<tr>
+							<td>
+								<code class="token scope">.default</code> ,
+								<code class="token scope">.red</code> , ...
+							</td>
+							<td>设置按钮颜色，具体颜色请参考颜色帮助文档</td>
+						</tr>
+						<tr>
+							<td>
+								<code class="token scope">.red-stripe</code> ,
+								<code class="token scope">.blue-stripe</code> , ...
+							</td>
+							<td>设置带有颜色条纹的按钮，具体颜色请参考颜色帮助文档</td>
+						</tr>
+						<tr>
+							<td>
+								<code class="token scope">.btn-lg</code> ,
+								<code class="token scope">.btn-sm</code> ,
+								<code class="token scope">.btn-xs</code>
+							</td>
+							<td>设置按钮的大小，分别有 大、小、超小 三种样式</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.btn-block</code></td>
+							<td>块级按钮(拉伸至父元素100%的宽度)</td>
+						</tr>
+						<tr>
+							<td><code class="token scope">.active</code></td>
+							<td>让按钮处于激活状态</td>
+						</tr>
+					</tbody>
+				</table>
+		
 				<!-- BEGIN Default Buttons  -->
-				<div id="intro1" class="portlet light">
+				<div id="intro1" class="portlet box blue-hoki margin-top-20">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="fa fa-cogs font-red-sunglo"></i>
-							<span class="caption-subject font-red-sunglo bold uppercase">Buttons</span>
+							<i class="fa fa-cogs"></i>
+							<span class="caption-subject bold uppercase">基础按钮</span>
 						</div>
 						<div class="tools">
-							<a href="javascript:;" class="collapse" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="reload" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="remove" data-original-title="" title="">
-							</a>
+							<a href="javascript:;" class="collapse"></a>
+							<a href="javascript:;" class="reload"></a>
+							<a href="javascript:;" class="remove"></a>
 						</div>
 					</div>
 					<div class="portlet-body">
 						<div class="clearfix">
-							<h4 class="block">Default Bootstrap Buttons</h4>
+							<h4 class="block"># Bootstrap 样式按钮</h4>
 							<!-- Standard gray button with gradient -->
 							<button type="button" class="btn btn-default">Default</button>
 							<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
@@ -53,8 +124,8 @@
 							<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
 							<button type="button" class="btn btn-link">Link</button>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Smartweb Style Buttons</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># Smartweb 风格按钮</h4>
 							<button type="button" class="btn default">Default</button>
 							<button type="button" class="btn red">Red</button>
 							<button type="button" class="btn blue">Blue</button>
@@ -63,10 +134,8 @@
 							<button type="button" class="btn purple">Purple</button>
 							<button type="button" class="btn dark">Dark</button>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">More Button Colors(go to <a href="javascript:;">
-							Flat UI Colors </a>
-							for more colors) </h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 不同颜色的按钮（更多颜色选择请参考  <a href="javascript:;"> Smartweb颜色 </a>） </h4>
 							<button type="button" class="btn blue-hoki">Blue Hoki</button>
 							<button type="button" class="btn blue-madison">Blue Madison</button>
 							<button type="button" class="btn green-meadow">Green Meadow</button>
@@ -75,8 +144,8 @@
 							<button type="button" class="btn purple-plum">Purple Plum</button>
 							<button type="button" class="btn grey-cascade">Grey Cascade</button>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Button Stripe</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 带有颜色条纹的按钮</h4>
 							<a href="javascript:;" class="btn default red-stripe">
 							Red </a>
 							<a href="javascript:;" class="btn default blue-stripe">
@@ -92,42 +161,33 @@
 							<a href="javascript:;" class="btn default dark-stripe">
 							Dark </a>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Disabled</h4>
-							<a href="javascript:;" class="btn default disabled">
-							Default </a>
-							<a href="javascript:;" class="btn red disabled">
-							Red </a>
-							<a href="javascript:;" class="btn blue disabled">
-							Blue </a>
-							<a href="javascript:;" class="btn green disabled">
-							Green </a>
-							<a href="javascript:;" class="btn yellow disabled">
-							Yellow </a>
-							<a href="javascript:;" class="btn purple disabled">
-							Purple </a>
-							<a href="javascript:;" class="btn dark disabled">
-							Dark </a>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 禁用按钮</h4>
+							<a href="javascript:;" class="btn default disabled">Default </a>
+							<a href="javascript:;" class="btn red disabled">Red </a>
+							<a href="javascript:;" class="btn blue disabled">Blue </a>
+							<a href="javascript:;" class="btn green disabled">Green </a>
+							<a href="javascript:;" class="btn yellow disabled">Yellow </a>
+							<a href="javascript:;" class="btn purple disabled">Purple </a>
+							<a href="javascript:;" class="btn dark disabled">Dark </a>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Button Sizes</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 不同大小的按钮</h4>
 							<button type="button" class="btn default btn-lg">Large button</button>
 							<button type="button" class="btn red">Default button</button>
 							<button type="button" class="btn blue btn-sm">Small button</button>
 							<button type="button" class="btn green btn-xs">Extra small button</button>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Button Tags</h4>
-							<a href="javascript:;" class="btn default">
-							Link </a>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 标记按钮</h4>
+							<a href="javascript:;" class="btn default">Link </a>
 							<button class="btn default">Button</button>
 							<input type="button" class="btn default" value="Input">
 							<input type="submit" class="btn default" value="Submit">
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Block Buttons</h4>
-							<a href="javascript:;" class="btn default btn-block">
-							Link </a>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 块级按钮</h4>
+							<a href="javascript:;" class="btn default btn-block">Link </a>
 							<button class="btn blue btn-block">Button</button>
 							<input type="button" class="btn red btn-block" value="Input">
 							<input type="submit" class="btn purple btn-block" value="Submit">
@@ -137,24 +197,21 @@
 				<!-- END Default Buttons -->
 			
 				<!-- BEGIN Button Groups  -->
-				<div id="intro2" class="portlet light">
+				<div id="intro2" class="portlet box blue-hoki">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="fa fa-cogs font-red-sunglo"></i>
-							<span class="caption-subject font-red-sunglo bold uppercase">Button Groups</span>
+							<i class="fa fa-cogs"></i>
+							<span class="caption-subject bold uppercase">按钮组</span>
 						</div>
 						<div class="tools">
-							<a href="javascript:;" class="collapse" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="reload" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="remove" data-original-title="" title="">
-							</a>
+							<a href="javascript:;" class="collapse"></a>
+							<a href="javascript:;" class="reload"></a>
+							<a href="javascript:;" class="remove"></a>
 						</div>
 					</div>
 					<div class="portlet-body">
-						<div class="clearfix">
-							<h4 class="block">Basic Example</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 基础例子</h4>
 							<div class="btn-group">
 								<button type="button" class="btn btn-default">Left</button>
 								<button type="button" class="btn btn-default">Middle</button>
@@ -166,8 +223,8 @@
 								<button type="button" class="btn green">Right</button>
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Button Toolbar</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 工具栏按钮</h4>
 							<div class="btn-toolbar margin-bottom-10">
 								<div class="btn-group">
 									<button type="button" class="btn btn-default">1</button>
@@ -201,8 +258,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Button Group Sizing</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 不同大小的按钮组</h4>
+							<p>通过设置 <code class="token scope">.btn-group-lg</code>、
+								<code class="token scope">.btn-group-sm</code>、
+								<code class="token scope">.btn-group-xs</code>
+								来变化大小
+							</p>
 							<div class="btn-toolbar">
 								<div class="btn-group btn-group-lg btn-group-solid margin-bottom-10">
 									<button type="button" class="btn red">Left</button>
@@ -232,53 +294,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Nesting Button Group</h4>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
-								<button type="button" class="btn btn-default"><i class="fa fa-cogs"></i> Settings</button>
-								<button type="button" class="btn btn-default"><i class="fa fa-bullhorn"></i> Feeds</button>
-								<div class="btn-group">
-									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-									<i class="fa fa-ellipsis-horizontal"></i> More <i class="fa fa-angle-down"></i>
-									</button>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="clearfix margin-bottom-10">
-							</div>
-							<div class="btn-group btn-group-solid">
-								<button type="button" class="btn red"><i class="fa fa-user"></i> Profile</button>
-								<button type="button" class="btn green"><i class="fa fa-cogs"></i> Settings</button>
-								<button type="button" class="btn purple"><i class="fa fa-bullhorn"></i> Feeds</button>
-								<div class="btn-group btn-group-solid">
-									<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown">
-									<i class="fa fa-ellipsis-horizontal"></i> More <i class="fa fa-angle-down"></i>
-									</button>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix">
-							<h4 class="block">Vertical variation</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 让按钮垂直排列</h4>
+							<p>通过给按钮元素的外层容器设置 <code class="token scope">.btn-group-vertical</code> 来达到垂直排列的效果
 							<div class="btn-group-vertical margin-right-10">
 								<button type="button" class="btn btn-default">Button</button>
 								<button type="button" class="btn btn-default">Button</button>
@@ -287,14 +305,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;">Dropdown link </a></li>
+										<li><a href="javascript:;">Dropdown link </a></li>
 									</ul>
 								</div>
 								<button type="button" class="btn btn-default">Button</button>
@@ -304,14 +316,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;">Dropdown link </a></li>
+										<li><a href="javascript:;">Dropdown link </a></li>
 									</ul>
 								</div>
 								<div class="btn-group">
@@ -319,14 +325,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;">Dropdown link </a></li>
+										<li><a href="javascript:;">Dropdown link </a></li>
 									</ul>
 								</div>
 								<div class="btn-group">
@@ -334,14 +334,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
 									</ul>
 								</div>
 							</div>
@@ -353,14 +347,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop5">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;">Dropdown link </a></li>
+										<li><a href="javascript:;">Dropdown link </a></li>
 									</ul>
 								</div>
 								<button type="button" class="btn red">Button</button>
@@ -370,14 +358,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop6">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
 									</ul>
 								</div>
 								<div class="btn-group">
@@ -385,14 +367,8 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop7">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
 									</ul>
 								</div>
 								<div class="btn-group">
@@ -400,461 +376,60 @@
 									Dropdown <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop8">
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Dropdown link </a>
-										</li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
+										<li><a href="javascript:;"> Dropdown link </a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Justified Link Variation</h4>
-							<div class="btn-group btn-group-justified">
-								<a href="javascript:;" class="btn btn-default">
-								Left </a>
-								<a href="javascript:;" class="btn btn-default">
-								Middle </a>
-								<a href="javascript:;" class="btn btn-default">
-								Right </a>
-							</div>
-							<div class="clearfix margin-bottom-10">
-							</div>
-							<div class="btn-group btn-group btn-group-justified">
-								<a href="javascript:;" class="btn red">
-								Left </a>
-								<a href="javascript:;" class="btn blue">
-								Middle </a>
-								<a href="javascript:;" class="btn green">
-								Right </a>
-							</div>
-						</div>
-
-
 					</div>
 				</div>
 				<!-- END Button Groups  -->
 			
 				<!-- BEGIN Button Dropdowns  -->
-				<div id="intro3" class="portlet light">
+				<div id="intro3" class="portlet box blue-hoki">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="fa fa-cogs font-red-sunglo"></i>
-							<span class="caption-subject font-red-sunglo bold uppercase">Button Dropdowns</span>
+							<i class="fa fa-cogs"></i>
+							<span class="caption-subject bold uppercase">带有下拉菜单的按钮</span>
 						</div>
 						<div class="tools">
-							<a href="javascript:;" class="collapse" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="reload" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="remove" data-original-title="" title="">
-							</a>
+							<a href="javascript:;" class="collapse"></a>
+							<a href="javascript:;" class="reload"></a>
+							<a href="javascript:;" class="remove"></a>
 						</div>
 					</div>
 					<div class="portlet-body">
 						<div class="clearfix">
-							<h4 class="block">Default Bootstrap Style</h4>
-							<div class="btn-group">
-								<button type="button" class="btn btn-default">Default</button>
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn btn-primary">Primary</button>
-								<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn btn-success">Success</button>
-								<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn btn-info">Info</button>
-								<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn btn-warning">Warning</button>
-								<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn btn-danger">Danger</button>
-								<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-						</div>
-						<div class="clearfix">
-							<h4 class="block">Metronic Style</h4>
-							<div class="btn-group">
-								<button type="button" class="btn default">Default</button>
-								<button type="button" class="btn default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn blue">Blue</button>
-								<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn green">Green</button>
-								<button type="button" class="btn green dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn red">Red</button>
-								<button type="button" class="btn red dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn yellow">Yellow</button>
-								<button type="button" class="btn yellow dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn dark">Dark</button>
-								<button type="button" class="btn dark dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-							<div class="btn-group">
-								<button type="button" class="btn purple">Purple</button>
-								<button type="button" class="btn purple dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- /btn-group -->
-						</div>
-						<div class="clearfix">
-							<h4 class="block">Dropdowns with Multilevel Submenu</h4>
-							<!-- Large button group -->
+							<h4 class="block"># 多级下拉菜单</h4>
 							<div class="btn-group">
 								<button class="btn blue dropdown-toggle" type="button" data-toggle="dropdown">
 								Dropdown <i class="fa fa-angle-down"></i>
 								</button>
 								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
+									<li><a href="javascript:;"> Action </a></li>
+									<li><a href="javascript:;"> Another action </a></li>
+									<li><a href="javascript:;"> Something else here </a></li>
+									<li class="divider"></li>
 									<li class="dropdown-submenu">
 										<a href="javascript:;">
 										More options </a>
 										<ul class="dropdown-menu" style="">
-											<li>
-												<a href="javascript:;">
-												Second level link </a>
-											</li>
+											<li><a href="javascript:;"> Second level link </a></li>
 											<li class="dropdown-submenu">
 												<a href="javascript:;">
 												More options </a>
 												<ul class="dropdown-menu">
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
 												</ul>
 											</li>
-											<li>
-												<a href="index.html">
-												Second level link </a>
-											</li>
-											<li>
-												<a href="index.html">
-												Second level link </a>
-											</li>
-											<li>
-												<a href="index.html">
-												Second level link </a>
-											</li>
+											<li><a href="index.html"> Second level link </a></li>
+											<li><a href="index.html"> Second level link </a></li>
+											<li><a href="index.html"> Second level link </a></li>
 										</ul>
 									</li>
 								</ul>
@@ -864,501 +439,130 @@
 								Dropup <i class="fa fa-angle-up"></i>
 								</button>
 								<ul class="dropdown-menu pull-right" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
+									<li><a href="javascript:;"> Action </a></li>
+									<li><a href="javascript:;"> Another action </a></li>
+									<li><a href="javascript:;"> Something else here </a></li>
+									<li class="divider"></li>
 									<li class="dropdown-submenu">
 										<a href="javascript:;">
 										More options </a>
 										<ul class="dropdown-menu" style="">
-											<li>
-												<a href="javascript:;">
-												Second level link </a>
-											</li>
+											<li><a href="javascript:;"> Second level link </a></li>
 											<li class="dropdown-submenu">
 												<a href="javascript:;">
 												More options </a>
 												<ul class="dropdown-menu pull-right">
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
-													<li>
-														<a href="index.html">
-														Third level link </a>
-													</li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
+													<li><a href="index.html"> Third level link </a></li>
 												</ul>
 											</li>
-											<li>
-												<a href="index.html">
-												Second level link </a>
-											</li>
-											<li>
-												<a href="index.html">
-												Second level link </a>
-											</li>
-											<li>
-												<a href="index.html">
-												Second level link </a>
-											</li>
+											<li><a href="index.html"> Second level link </a></li>
+											<li><a href="index.html"> Second level link </a></li>
+											<li><a href="index.html"> Second level link </a></li>
 										</ul>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Sizing</h4>
-							<!-- Large button group -->
-							<div class="btn-group">
-								<button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-								Large button <i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- Small button group -->
-							<div class="btn-group">
-								<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-								Small button <i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- Extra small button group -->
-							<div class="btn-group">
-								<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-								Extra small button <i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<div class="clearfix margin-bottom-10">
-							</div>
-							<!-- Large button group -->
-							<div class="btn-group">
-								<button class="btn red btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-								Large button <i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- Small button group -->
-							<div class="btn-group">
-								<button class="btn blue btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-								Small button <i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-							<!-- Extra small button group -->
-							<div class="btn-group">
-								<button class="btn green btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-								Extra small button <i class="fa fa-angle-down"></i>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="javascript:;">
-										Action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Another action </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										Something else here </a>
-									</li>
-									<li class="divider">
-									</li>
-									<li>
-										<a href="javascript:;">
-										Separated link </a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="clearfix">
-							<h4 class="block">Dropup</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 向上弹出式菜单 & 靠右弹出式菜单</h4>
+							<p>有时，根据画面布局，菜单要设置弹出的方向（上或下、左或右），可以按如下方式设置：</p>
+							<p>&nbsp;&nbsp;通过给按钮外层容器设置 <code class="token scope">.dropup</code> 让菜单向上弹出（缺省是向下）</p>
+							<p>&nbsp;&nbsp;通过给下拉菜单(ul)设置 <code class="token scope">.pull-right</code> 让菜单靠右边弹出（缺省是靠左）</p>
 							<div class="btn-toolbar margin-bottom-10">
 								<div class="btn-group dropup">
 									<button type="button" class="btn btn-default">Dropup</button>
 									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
 									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 								<div class="btn-group dropup">
 									<button type="button" class="btn btn-primary">Right dropup</button>
 									<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
 									<ul class="dropdown-menu pull-right" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 							</div>
 							<div class="btn-toolbar">
 								<div class="btn-group dropup">
 									<button type="button" class="btn blue">Dropup</button>
 									<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
 									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 								<div class="btn-group dropup">
 									<button type="button" class="btn green">Right dropup</button>
 									<button type="button" class="btn green dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
 									<ul class="dropdown-menu pull-right" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Hoveralbe Dropdowns</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 鼠标浮动弹出</h4>
+							<p>通过给按钮设置 <code class="token scope">data-toggle="dropdown"</code> 属性，使鼠标移动到按钮上时就弹出菜单</p>
 							<div class="btn-toolbar margin-bottom-10">
 								<div class="btn-group">
 									<button type="button" class="btn btn-default">Dropdown</button>
 									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"><i class="fa fa-angle-down"></i></button>
 									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 								<div class="btn-group dropup">
 									<button type="button" class="btn btn-primary">Dropup</button>
 									<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"><i class="fa fa-angle-up"></i></button>
 									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 								<div class="btn-group">
 									<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
 									Dropup <i class="fa fa-angle-down"></i>
 									</button>
 									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
+										<li><a href="javascript:;"> Action </a></li>
+										<li><a href="javascript:;"> Another action </a></li>
+										<li><a href="javascript:;"> Something else here </a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;"> Separated link </a></li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
-							</div>
-							<div class="btn-toolbar">
-								<div class="btn-group">
-									<button type="button" class="btn blue">Dropdown</button>
-									<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true"><i class="fa fa-angle-down"></i></button>
-									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
-									</ul>
-								</div>
-								<!-- /btn-group -->
-								<div class="btn-group dropup">
-									<button type="button" class="btn green">Dropup</button>
-									<button type="button" class="btn green dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
-									<i class="fa fa-angle-up"></i></button>
-									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
-									</ul>
-								</div>
-								<!-- /btn-group -->
-								<div class="btn-group">
-									<button type="button" class="btn yellow dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
-									Dropdown <i class="fa fa-angle-down"></i>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li>
-											<a href="javascript:;">
-											Action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Another action </a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Something else here </a>
-										</li>
-										<li class="divider">
-										</li>
-										<li>
-											<a href="javascript:;">
-											Separated link </a>
-										</li>
-									</ul>
-								</div>
-								<!-- /btn-group -->
 							</div>
 						</div>
-						<div class="clearfix">
-							<h4 class="block">Dropdown with Checkboxes & Search Form</h4>
+						<div class="clearfix margin-top-10">
+							<h4 class="block"># 包含表单控件（checkbox、radio、input）</h4>
 							<div class="btn-group">
 								<button class="btn green dropdown-toggle" type="button" data-toggle="dropdown">
 								Search Dropdown <i class="fa fa-angle-down"></i>
@@ -1375,7 +579,7 @@
 								</div>
 							</div>
 							<div class="btn-group">
-								<button type="button" class="btn blue">Dropdown</button>
+								<button type="button" class="btn blue">Checkbox Dropdown</button>
 								<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
 								<div class="dropdown-menu hold-on-click dropdown-checkboxes" role="menu">
 									<label><input type="checkbox">Option 1</label>
@@ -1385,9 +589,8 @@
 									<label><input type="checkbox">Option 5</label>
 								</div>
 							</div>
-							<!-- /btn-group -->
 							<div class="btn-group dropup">
-								<button type="button" class="btn green">Dropup</button>
+								<button type="button" class="btn green">Checkbox Dropup</button>
 								<button type="button" class="btn green dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
 								<div class="dropdown-menu hold-on-click dropdown-checkboxes" role="menu">
 									<label><input type="checkbox">Option 1</label>
@@ -1397,17 +600,8 @@
 									<label><input type="checkbox">Option 5</label>
 								</div>
 							</div>
-							<!-- /btn-group -->
-							<div class="clearfix margin-top-10">
-								<span class="label label-success">
-								NOTE: </span>
-								&nbsp; By adding <code>hold-on-click</code> class you can avoid closing the dropdown on click
-							</div>
-						</div>
-						<div class="clearfix">
-							<h4 class="block">Dropdown with Radio Buttons</h4>
 							<div class="btn-group">
-								<button type="button" class="btn blue">Dropdown</button>
+								<button type="button" class="btn blue">Radio</button>
 								<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
 								<div class="dropdown-menu hold-on-click dropdown-radiobuttons" role="menu">
 									<label><input type="radio" name="radio_button_1">Option 1</label>
@@ -1417,23 +611,9 @@
 									<label><input type="radio" name="radio_button_1">Option 5</label>
 								</div>
 							</div>
-							<!-- /btn-group -->
-							<div class="btn-group dropup">
-								<button type="button" class="btn green">Dropup</button>
-								<button type="button" class="btn green dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
-								<div class="dropdown-menu hold-on-click dropdown-radiobuttons" role="menu">
-									<label><input type="radio" name="radio_button_2">Option 1</label>
-									<label><input type="radio" name="radio_button_2">Option 2</label>
-									<label><input type="radio" name="radio_button_2">Option 3</label>
-									<label><input type="radio" name="radio_button_2">Option 4</label>
-									<label><input type="radio" name="radio_button_2">Option 5</label>
-								</div>
-							</div>
-							<!-- /btn-group -->
 							<div class="clearfix margin-top-10">
-								<span class="label label-success">
-								NOTE: </span>
-								&nbsp; By adding <code>hold-on-click</code> class you can avoid closing the dropdown on click
+								<span class="label label-success">注意: </span>
+								&nbsp; 通过设置 <code>.hold-on-click</code> 类来避免弹出框失去焦点
 							</div>
 						</div>
 					</div>
@@ -1441,142 +621,52 @@
 				<!-- END Button Dropdowns -->
 				
 				<!-- BEGIN Font Awesome Styled Buttons  -->
-				<div id="intro4" class="portlet light">
+				<div id="intro4" class="portlet box blue-hoki">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="fa fa-cogs font-red-sunglo"></i>
-							<span class="caption-subject font-red-sunglo bold uppercase">Font Awesome Styled Buttons</span>
+							<i class="fa fa-cogs"></i>
+							<span class="caption-subject bold uppercase">Font Awesome 风格按钮</span>
 						</div>
 						<div class="tools">
-							<a href="javascript:;" class="collapse" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="reload" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="remove" data-original-title="" title="">
-							</a>
+							<a href="javascript:;" class="collapse"></a> 
+							<a href="javascript:;" class="reload"></a> 
+							<a href="javascript:;" class="remove"></a>
 						</div>
 					</div>
 					<div class="portlet-body">
 						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-group"></i>
-						<div>
-							 Users
-						</div>
-						<span class="badge badge-danger">
-						2 </span>
+							<i class="fa fa-group"></i>
+							<div>Users</div>
+							<span class="badge badge-danger">2 </span>
 						</a>
 						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-barcode"></i>
-						<div>
-							 Products
-						</div>
-						<span class="badge badge-success">
-						4 </span>
+							<i class="fa fa-barcode"></i>
+							<div>Products</div>
+							<span class="badge badge-success">4 </span>
 						</a>
 						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-bar-chart-o"></i>
-						<div>
-							 Reports
-						</div>
+							<i class="fa fa-bar-chart-o"></i>
+							<div>Reports</div>
 						</a>
 						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-sitemap"></i>
-						<div>
-							 Categories
-						</div>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-calendar"></i>
-						<div>
-							 Calendar
-						</div>
-						<span class="badge badge-success">
-						4 </span>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-envelope"></i>
-						<div>
-							 Inbox
-						</div>
-						<span class="badge badge-info">
-						12 </span>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-bullhorn"></i>
-						<div>
-							 Notification
-						</div>
-						<span class="badge badge-danger">
-						3 </span>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-map-marker"></i>
-						<div>
-							 Locations
-						</div>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-money"><i></i></i>
-						<div>
-							 Finance
-						</div>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-plane"></i>
-						<div>
-							 Projects
-						</div>
-						<span class="badge badge-info">
-						21 </span>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-thumbs-up"></i>
-						<div>
-							 Feedback
-						</div>
-						<span class="badge badge-info">
-						2 </span>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-cloud"></i>
-						<div>
-							 Servers
-						</div>
-						<span class="badge badge-danger">
-						2 </span>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-globe"></i>
-						<div>
-							 Regions
-						</div>
-						</a>
-						<a href="javascript:;" class="icon-btn">
-						<i class="fa fa-heart-o"></i>
-						<div>
-							 Popularity
-						</div>
-						<span class="badge badge-info">
-						221 </span>
+							<i class="fa fa-sitemap"></i>
+							<div>Categories</div>
 						</a>
 					</div>
 				</div>
 				<!-- END Font Awesome Styled Buttons  -->
 
 				<!-- BEGIN Social Icons  -->
-				<div id="intro5" class="portlet light">
+				<div id="intro5" class="portlet box blue-hoki">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="fa fa-cogs font-red-sunglo"></i>
-							<span class="caption-subject font-red-sunglo bold uppercase">Social Icons</span>
+							<i class="fa fa-cogs"></i>
+							<span class="caption-subject bold uppercase">社交图标</span>
 						</div>
 						<div class="tools">
-							<a href="javascript:;" class="collapse" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="reload" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="remove" data-original-title="" title="">
-							</a>
+							<a href="javascript:;" class="collapse"></a> 
+							<a href="javascript:;" class="reload"></a> 
+							<a href="javascript:;" class="remove"></a>
 						</div>
 					</div>
 					<div class="portlet-body util-btn-margin-bottom-5">
@@ -1591,45 +681,25 @@
 				<!-- END Social Icons  -->
 				
 				<!-- BEGIN Button States  -->
-				<div id="intro6" class="portlet light">
+				<div id="intro6" class="portlet box blue-hoki">
 					<div class="portlet-title">
 						<div class="caption">
-							<i class="fa fa-cogs font-red-sunglo"></i>
-							<span class="caption-subject font-red-sunglo bold uppercase">Button States</span>
+							<i class="fa fa-cogs"></i>
+							<span class="caption-subject bold uppercase">按钮状态</span>
 						</div>
 						<div class="tools">
-							<a href="javascript:;" class="collapse" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="reload" data-original-title="" title="">
-							</a>
-							<a href="javascript:;" class="remove" data-original-title="" title="">
-							</a>
+							<a href="javascript:;" class="collapse"></a> 
+							<a href="javascript:;" class="reload"></a> 
+							<a href="javascript:;" class="remove"></a>
 						</div>
 					</div>
 					<div class="portlet-body util-btn-margin-bottom-5">
-						<h4>Loading State</h4>
+						<h4># 显示加载状态的按钮</h4>
 						<div class="clearfix">
-							<button type="button" data-loading-text="Loading..." class="demo-loading-btn btn-circle btn btn-primary">
-							Loading state </button>
-							<button type="button" data-loading-text="Loading..." class="demo-loading-btn btn-circle btn btn-default">
-							Loading state </button>
-							<button type="button" data-loading-text="Loading..." class="demo-loading-btn btn-circle btn red">
-							Loading state </button>
-							<button type="button" data-loading-text="Loading..." class="demo-loading-btn btn-circle btn blue">
+							<button type="button" data-loading-text="加载中..." class="demo-loading-btn btn btn-primary">
 							Loading state </button>
 						</div>
-						<h4>Single Toggle</h4>
-						<div class="clearfix">
-							<button type="button" class="btn btn-circle btn-primary" data-toggle="button">
-							Single toggle </button>
-							<button type="button" class="btn btn-circle btn-default" data-toggle="button">
-							Single toggle </button>
-							<button type="button" class="btn btn-circle red" data-toggle="button">
-							Single toggle </button>
-							<button type="button" class="btn btn-circle blue" data-toggle="button">
-							Single toggle </button>
-						</div>
-						<h4>Checkbox</h4>
+						<h4 class="margin-top-20"># Checkbox 按钮</h4>
 						<div class="clearfix">
 							<div class="btn-group btn-group-circle" data-toggle="buttons">
 								<label class="btn default active">
@@ -1650,9 +720,9 @@
 								<input type="checkbox" class="toggle"> Option 3 </label>
 							</div>
 						</div>
-						<h4>Radio</h4>
+						<h4 class="margin-top-20"># Radio 按钮</h4>
 						<div class="clearfix">
-							<div class="btn-group btn-group-circle" data-toggle="buttons">
+							<div class="btn-group" data-toggle="buttons">
 								<label class="btn blue active">
 								<input type="radio" class="toggle"> Option 1 </label>
 								<label class="btn blue">
@@ -1682,12 +752,12 @@
 	<div class="col-md-2">
 		<div class="page-nav">
 			<ul id="nav">
-				<li class="current"><a href="#intro1" ><i class="fa fa-tree"></i>  Default Buttons</a></li>
-				<li><a href="#intro2"><i class="fa fa-gear"></i> Button Groups</a></li>
-				<li><a href="#intro3"><i class="fa fa-gear"></i> Button Dropdowns</a></li>
-				<li><a href="#intro4"><i class="fa fa-gear"></i> Font Awesome Buttons</a></li>
-				<li><a href="#intro5"><i class="fa fa-gear"></i> Social Icons</a></li>
-				<li><a href="#intro6"><i class="fa fa-gear"></i> Button States</a></li>
+				<li class="current"><a href="#intro1" >基础按钮</a></li>
+				<li><a href="#intro2">按钮组</a></li>
+				<li><a href="#intro3">下拉菜单按钮</a></li>
+				<li><a href="#intro4">Fontawesome 按钮</a></li>
+				<li><a href="#intro5">社交按钮</a></li>
+				<li><a href="#intro6">按钮状态</a></li>
 			</ul>
 		</div>
 	</div>
@@ -1715,6 +785,15 @@
 	$(document).ready(function(){
 		$('.theme-panel').addClass('hide');
 		$('#nav').onePageNav();
+		
+	    $('.demo-loading-btn')
+	      .click(function () {
+	        var btn = $(this)
+	        btn.button('loading')
+	        setTimeout(function () {
+	          btn.button('reset')
+	        }, 3000)
+	    });
 		
 	});
 	

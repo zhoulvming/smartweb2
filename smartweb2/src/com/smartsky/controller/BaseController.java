@@ -15,5 +15,16 @@ public class BaseController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String control( HttpServletRequest req) {
 		return "index";
-	}	
+	}
+	
+	/**
+	 * fordreams
+	 * @param req
+	 * @return
+	 */
+	@RequestMapping(value="/home", method=RequestMethod.GET)
+	public String home( HttpServletRequest req) {
+		return "home";
+	}
+	
 }

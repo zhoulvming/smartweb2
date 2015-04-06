@@ -9,7 +9,9 @@ var Smartweb = function() {
     var isIE9 = false;
     var isIE10 = false;
 
+    // request url info
     var basePath = '';
+    var pathinfo = '';
     
     var resizeHandlers = [];
 
@@ -20,6 +22,8 @@ var Smartweb = function() {
     var globalPluginsPath = 'global/plugins/';
 
     var globalCssPath = 'global/css/';
+    
+    var fs1, fs2, fs3; // variable for page-content's fullscreen
     
     $(window).load(function(){
         // Page Preloader
@@ -121,19 +125,24 @@ var Smartweb = function() {
 
         // handle portlet fullscreen
         $('body').on('click', '.portlet > .portlet-title .fullscreen', function(e) {
-            e.preventDefault();
+        	e.preventDefault();
             var portlet = $(this).closest(".portlet");
+            
             if (portlet.hasClass('portlet-fullscreen')) {
                 $(this).removeClass('on');
                 portlet.removeClass('portlet-fullscreen');
                 $('body').removeClass('page-portlet-fullscreen');
                 portlet.children('.portlet-body').css('height', 'auto');
             } else {
-                var height = Smartweb.getViewPort().height -
-                    portlet.children('.portlet-title').outerHeight() -
-                    parseInt(portlet.children('.portlet-body').css('padding-top')) -
-                    parseInt(portlet.children('.portlet-body').css('padding-bottom'));
-
+                var height = Smartweb.getViewPort().height;
+                
+                if ( ! portlet.hasClass('layout-portlet') ) {
+                  height = height -
+	                  portlet.children('.portlet-title').outerHeight() -
+	                  parseInt(portlet.children('.portlet-body').css('padding-top')) -
+	                  parseInt(portlet.children('.portlet-body').css('padding-bottom'));
+                }
+                
                 $(this).addClass('on');
                 portlet.addClass('portlet-fullscreen');
                 $('body').addClass('page-portlet-fullscreen');
@@ -528,14 +537,65 @@ var Smartweb = function() {
         }
     };
 
+    // handle page-cotent's fullscreen
+    var handleLayoutFullscreen = function() {
+    	$('#layout_portlet_title').css('left', $('.page-sidebar').width() + 'px');
+		$('#fullscreen_icon').click(function(){
+			if ( $('body').hasClass('page-portlet-fullscreen') ) {
+				$('#layout_portlet_title').css('top', fs1);
+				$('#layout_portlet_title').css('left', fs2);
+				$('#layout_portlet_body').css('padding-top', fs3);
+			} else {
+				fs1 = $('#layout_portlet_title').css('top');
+				fs2 = $('#layout_portlet_title').css('left');
+				fs3 = $('#layout_portlet_body').css('padding-top');
+				
+				$('#layout_portlet_title').css('top', '0');
+				$('#layout_portlet_title').css('left', '0');
+				$('#layout_portlet_body').css('padding-top', '60px');
+			}
+			$(window).trigger('resize');
+		});
+		$('.sidebar-toggler').click(function(){
+			if ( $('body').hasClass('page-sidebar-closed') ) {
+				//when sidebar open
+				$('#layout_portlet_title').css('left','195px');
+			} else {
+				//when sidebar close
+				$('#layout_portlet_title').css('left', '54px');
+			}
+		});
+		
+    };
+    
+    // handle sidebar status
+    var handleSidebarStatus = function() {
+    	
+    	// get current menulink tag by request url info
+    	var fullinfo = basePath + pathinfo.substring(1);
+    	var curr = $('.page-sidebar-menu').find('a[href="' + fullinfo +'"]');
+    	
+    	// first: clear all active status
+    	$('.page-sidebar-menu li.active').removeClass('active');
+    	
+    	// set current submenu status
+    	curr.closest('li').addClass('active');
+    	
+    	//set and parent menu status
+    	if (curr.closest('ul').hasClass('sub-menu')) {
+    		curr.closest('ul').parent().addClass('active');
+    	}
+    };
+    
     //* END:CORE HANDLERS *//
 
     return {
 
         //main function to initiate the theme
-        init: function(_basePath) {
+        init: function(_basePath, _pathinfo) {
         	
         	basePath = _basePath;
+        	pathinfo = _pathinfo;
         	
             //IMPORTANT!!!: Do not modify the core handlers call order.
 
@@ -563,6 +623,12 @@ var Smartweb = function() {
 
             // Hacks
             handleFixInputPlaceholderForIE(); //IE8 & IE9 input placeholder issue fix
+            
+            // handle page-cotent's fullscreen
+            handleLayoutFullscreen();
+            
+            // handle sidebar status
+            handleSidebarStatus();
         },
 
         //main function to initiate core javascript after ajax complete
