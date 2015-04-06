@@ -94,7 +94,7 @@ delicate portlet style
 }
 .portlet.delicate.right {
 	/* border-left: 2px solid #eee !important; */
-	margin-left: -15px !important;
+	margin-left: -10px !important;
 }
 
 /* layout-portlet style */
@@ -127,7 +127,7 @@ delicate portlet style
 	width:27px;height:27px;
 }
 #layout_portlet_body {
-	padding-top:30px;
+	padding-top:35px;
 	background:#fff;
 }
 

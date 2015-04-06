@@ -2,9 +2,13 @@
 <#macro page_style>
 <link rel="stylesheet" type="text/css" href="${BASEPATH}assets/global/plugins/jquery-easyui/easyui.css">
 <link rel="stylesheet" type="text/css" href="${BASEPATH}assets/global/plugins/jquery-easyui/icon.css">
+<link rel="stylesheet" type="text/css" href="${BASEPATH}assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css"/>
 </#macro>
 
+
+
 <#macro page_content>
+<#include "report-edit-modal.jsp">
 <div class="row">
 	<div class="col-md-8">
 		<div class="portlet delicate left">
@@ -12,10 +16,12 @@
 				<div class="caption"><i class="fa fa-twitter"></i>报告列表</div>
 				<div class="actions">
 					<div class="btn-group" data-toggle="buttons">
-						<a href="javascript:;" class="btn btn-default btn-sm">
+						<a href="javascript:;" class="btn btn-default btn-sm" onclick="ManageIndex.reportEdit()">
 						<i class="fa fa-pencil"></i> 修改 </a>
+						
+						
 						<a href="javascript:;" class="btn btn-default btn-sm">
-						<i class="fa fa-plus"></i> 发布 </a>
+						<i class="fa fa-paper-plane"></i> 发布 </a>
 						<a href="javascript:;" class="btn btn-default btn-sm">
 						<i class="fa fa-download"></i> 下载 </a>
 					</div>
@@ -87,11 +93,14 @@
 
 <#macro page_script>
 <script src="${BASEPATH}assets/global/plugins/jquery-easyui/jquery.easyui.min.js"></script>
+<script src="${BASEPATH}assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
 <script src="${BASEPATH}assets/admin/pages/scripts/manage/manage-index.js"></script>
 <script>
 
     jQuery(document).ready(function() {
     	ManageIndex.init();
+    	
+    	
     });
 </script>
 </#macro>

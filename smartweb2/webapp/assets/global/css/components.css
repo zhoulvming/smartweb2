@@ -4097,7 +4097,7 @@ Customized Bootstrap Modal
   font-weight: 300;
 }
 .modal .modal-header .close {
-  margin-top: 0px !important;
+  margin-top: 6px !important;
 }
 .modal.draggable-modal .modal-header {
   cursor: move;

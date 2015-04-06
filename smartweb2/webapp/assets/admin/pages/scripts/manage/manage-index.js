@@ -51,7 +51,7 @@ var ManageIndex = function () {
 				"date":"01/13/2010",
 			},{
 				"id":22,
-				"name":"维修手册11111",
+				"name":"维修手册2222",
 				"status":"待审核",
 				"secret":1,
 				"code":"111-11",
@@ -61,7 +61,7 @@ var ManageIndex = function () {
 				"date":"01/13/2010",
 			},{
 				"id":23,
-				"name":"维修手册11111",
+				"name":"维修手册3333",
 				"status":"待审核",
 				"secret":1,
 				"code":"111-11",
@@ -71,7 +71,7 @@ var ManageIndex = function () {
 				"date":"01/13/2010",
 			},{
 				"id":24,
-				"name":"维修手册11111",
+				"name":"维修手册44444",
 				"status":"待审核",
 				"secret":1,
 				"code":"111-11",
@@ -150,7 +150,30 @@ var ManageIndex = function () {
         	}
         	
         	$(window).trigger('resize');
-        }
+        },
+        
+        // show report-edit-modal modal
+        reportEdit: function(id) {
+        	
+        	// get current selected data
+            var row = $('#tg1').treegrid('getSelected');
+            if ( Env.isEmpty(row)) {
+            	alert('please select data');
+            	return ;
+            }
+            
+            // when selected node is a leaf, alert error then return
+            if ( Env.isEmpty(row.code)) {
+            	alert('this is a leaf, please select data');
+            	return ;
+            }
+
+            // set data to modal
+            $('#txt_name').val(row.name);
+            
+            // last to show modal
+        	$('#report-edit-modal').modal('show');
+        },
     };
 
 }();
