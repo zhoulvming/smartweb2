@@ -14,7 +14,7 @@ var Env = function () {
 		return !isOpera() && check(/msie/);
 	};
 	var isArray = function(v) {
-		return toString.apply(v) === '[object Array]';
+		return Object.prototype.toString.apply(v) === '[object Array]';
 	};
 	
 	return {
