@@ -10,13 +10,25 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
-	<context:component-scan base-package="com.smartsky.controller" />
+	<context:component-scan base-package="com.smartsky.manual.controller" />
 	
 	<!-- 为了使用json，必须配置 <mvc:annotation-driven/> --> 
 	<mvc:annotation-driven/>
-	
+
 	<!-- 对静态资源文件的访问 -->
 	<mvc:resources mapping="/assets/**" location="/assets/" />
+	
+	<!-- 拦截器 (多个拦截器,顺序执行) -->  
+    <mvc:interceptors>    
+        <mvc:interceptor>    
+          <!-- 需要被拦截的路径 (如果不配置或/**,将拦截所有的Controller) -->  
+           <mvc:mapping path="/**" />   
+           <!-- 拦截处理的interceptor -->  
+           <bean class="com.smartsky.manual.interceptor.FreeMarkerViewInterceptor"></bean>    
+        </mvc:interceptor>    
+    </mvc:interceptors>  
+	
+	
 
 	<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
 	<bean id="mappingJacksonHttpMessageConverter"

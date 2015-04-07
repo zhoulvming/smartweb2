@@ -19,7 +19,7 @@
 				<label class="btn grey-steel active btn-sm" style="max-width:none">
 				<input type="radio" class="toggle"><i class="fa fa-adn font-yellow-gold"></i> 按平均分排序 </label>
 				<label class="btn grey-steel btn-sm" style="max-width:none">
-				<input type="radio" class="toggle"><i class="fa fa-eye font-green"></i>  按阅读数排序 </label>
+				<input type="radio" class="toggle"><i class="fa fa-eye font-green"></i>  按阅读数排序${base } </label>
 			</div>
 		</div>
 		<div class="actions">

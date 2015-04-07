@@ -16,8 +16,6 @@
 					<div class="btn-group" data-toggle="buttons">
 						<a href="javascript:;" class="btn btn-default btn-sm" onclick="ManageIndex.reportEdit()">
 						<i class="fa fa-pencil"></i> 修改 </a>
-						
-						
 						<a href="javascript:;" class="btn btn-default btn-sm">
 						<i class="fa fa-paper-plane"></i> 发布 </a>
 						<a href="javascript:;" class="btn btn-default btn-sm">
@@ -40,7 +38,10 @@
 				            method: 'get',
 				            rownumbers: false,
 				            idField: 'id',
-				            treeField: 'name'">
+				            treeField: 'name',
+				            onLoadSuccess: function(row) {
+								$(this).treegrid('enableDnd', row?row.id:null);
+							}">
 				    <thead>
 						<tr>
 							<th data-options="field:'name'" width="25%">名称</th>
@@ -91,14 +92,12 @@
 
 <#macro page_script>
 <script src="${BASEPATH}assets/global/plugins/jquery-easyui/jquery.easyui.min.js"></script>
+<script src="${BASEPATH}assets/global/plugins/jquery-easyui/treegrid-dnd.js"></script>
 <script src="${BASEPATH}assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
 <script src="${BASEPATH}assets/admin/pages/scripts/manage/manage-index.js"></script>
 <script>
-
     jQuery(document).ready(function() {
     	ManageIndex.init();
-    	
-    	
     });
 </script>
 </#macro>
