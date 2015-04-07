@@ -5,8 +5,6 @@
 <link rel="stylesheet" type="text/css" href="${BASEPATH}assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css"/>
 </#macro>
 
-
-
 <#macro page_content>
 <#include "report-edit-modal.jsp">
 <div class="row">
