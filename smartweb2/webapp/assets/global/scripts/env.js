@@ -19,22 +19,20 @@ var Env = function () {
 	
 	return {
 		//判断环境，操作系统、浏览器、是否是https连接等
-    isStrict : DOC.compatMode == "CSS1Compat",
-    isOpera : isOpera(),
-    isChrome : isChrome(),
-    isIE : isIE(),
-    isWindows : check(/windows|win32/),  
-    isMac : check(/macintosh|mac os x/),  
-    isAir : check(/adobeair/),  
-    isLinux : check(/linux/),  
-    isSecure : /^https/i.test(window.location.protocol),
-    isArray : function(v) {
-    	return isArray(v);
-    },
-    isEmpty : function(v, allowBlank) {
-      return v === null || v === undefined || ((isArray(v) && !v.length)) || (!allowBlank ? v === '' : false);  
-    },
-
+	    isStrict : DOC.compatMode == "CSS1Compat",
+	    isOpera : isOpera(),
+	    isChrome : isChrome(),
+	    isIE : isIE(),
+	    isWindows : check(/windows|win32/),  
+	    isMac : check(/macintosh|mac os x/),  
+	    isAir : check(/adobeair/),  
+	    isLinux : check(/linux/),  
+	    isSecure : /^https/i.test(window.location.protocol),
+	    isArray : function(v) {
+	    	return isArray(v);
+	    },
+	    isEmpty : function(v, allowBlank) {
+	      return v === null || v === undefined || ((isArray(v) && !v.length)) || (!allowBlank ? v === '' : false);  
+	    },
 	};
-	
 }();

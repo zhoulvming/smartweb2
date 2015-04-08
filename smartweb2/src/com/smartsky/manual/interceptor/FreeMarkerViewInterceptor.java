@@ -7,6 +7,9 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import com.smartsky.manual.common.FireAuthority;
+import com.smartsky.manual.common.RoleType;
+
 public class FreeMarkerViewInterceptor extends HandlerInterceptorAdapter {
 	public void afterCompletion(HttpServletRequest arg0,
 			HttpServletResponse arg1, Object arg2, Exception arg3)
@@ -27,7 +30,25 @@ public class FreeMarkerViewInterceptor extends HandlerInterceptorAdapter {
 			HttpServletResponse response, Object handler) throws Exception {
 
 		// 处理Permission Annotation，实现方法级权限控制
-//		HandlerMethod method = (HandlerMethod) handler;
+		//HandlerMethod method = (HandlerMethod) handler;
+		
+		HandlerMethod handlerMethod;
+		if (handler instanceof HandlerMethod) {
+			handlerMethod = (HandlerMethod) handler;
+		} else {
+			return true;
+		}
+		
+		FireAuthority fireAuthority = handlerMethod.getMethodAnnotation(FireAuthority.class);
+		if(null == fireAuthority){
+			// 没有声明权限,放行
+			return true;
+		}
+		
+		
+		
+		
+		
 //		Permission permission = method.getMethodAnnotation(Permission.class);
 
 //		// 如果为空在表示该方法不需要进行权限验证

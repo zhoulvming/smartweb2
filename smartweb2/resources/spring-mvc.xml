@@ -53,7 +53,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	<!-- FreeMarker视图环境配置 -->  
     <bean id="freemarkerConfig"
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-		<property name="templateLoaderPath" value="/WEB-INF/view/jsp/" /> <!-- freemarker模板位置 -->
+		<property name="templateLoaderPath" value="/views/" /> <!-- freemarker模板位置 -->
 		<property name="defaultEncoding" value="utf-8" /> 
    		<property name="freemarkerSettings">
 		   <props>

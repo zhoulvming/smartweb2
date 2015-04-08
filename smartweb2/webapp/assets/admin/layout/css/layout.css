@@ -225,7 +225,7 @@ Page Header
   padding-right: 0;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle > i {
-  font-size: 19px;
+  font-size: 17px;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle > i.glyphicon {
   top: 0;
@@ -428,13 +428,13 @@ Page Header
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username {
   display: inline-block;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > img {
   float: left;
-  margin-top: -8px;
+  margin-top: -6px;
   margin-right: 7px;
-  height: 39px;
+  height: 35px;
   display: inline-block;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > i {

@@ -1,0 +1,4 @@
+[
+  { "id" : "demo_root_1", "text" : "root 1", "children" : true, "type" : "root" },
+  { "id" : "demo_root_2", "text" : "root 2", "type" : "root" }
+]

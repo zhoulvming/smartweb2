@@ -1,0 +1,234 @@
+<#include "../ftl/main_layout.ftl">
+<#macro page_style>
+<link href="${BASEPATH}assets/admin/layout/css/help.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="${BASEPATH}assets/global/plugins/jstree/dist/themes/default/style.min.css"/>
+</#macro>
+
+<#macro page_content>
+<div class="row">
+	<div class="col-md-10">
+		<div class="delicate left">
+			<div class="portlet-body">
+				<!-- BEGIN trainning tree  -->
+				<div id="intro3" class="portlet light">
+					<div class="col-md-3">
+						<input type="text"
+							class="input-icon form-control maxlength-handler" id="nodeSearch"
+							maxlength="20">
+					</div>
+					<div class="portlet-body">
+						<div id="tranningTree" class="tree-demo"></div>
+					</div>
+				</div>
+				<!-- END trainning tree -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 新建文件夹弹出窗口 -->					
+<div class="modal fade" id="folder_modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" style="height:250px,width:400px">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">新建文件夹</h4>
+			</div>
+			<div class="modal-body">
+				 <form id="folder_form" class="form-horizontal form-row-seperated" action="#">
+					 <!-- 隐藏字段用于存储folderid -->
+					<input id="hf_folderid" name="hf_folderid" type="hidden" value="">
+					<!-- 隐藏字段用于存储parentid -->
+					<input id="hf_parentid" name="hf_parentid" type="hidden" value="">
+				 	<div  class="form-group">
+						<label class="col-md-2 control-label">名称: <span class="required">* </span></label>
+						<div class="col-md-10">
+							<input type="text" class="input-icon form-control maxlength-handler" id="folderName" name="folderName" maxlength="20">
+						</div>
+					</div>
+				 </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="saveFolder()" class="btn blue">确定</button>
+				<button type="button" data-dismiss="modal" class="btn default">取消</button>
+			</div>
+		</div>
+	</div>
+</div>	
+<!-- END 新建文件夹弹出窗口 -->	
+</#macro> <#macro page_script>
+<script src="${BASEPATH}assets/global/plugins/jquery.nav.js" type="text/javascript"></script>
+<script src="${BASEPATH}assets/global/plugins/jstree/dist/jstree.min.js"></script>
+<!-- BEGIN 编辑状态进入页面时候填充数据 -->
+<#if folder ??>
+<script>
+$('#hf_folderid').val(<#if folder.standardFolderId ??>'${folder.standardFolderId}'<#else>''</#if>);
+$('#folderName').val(<#if folder.folderName ??>'${folder.folderName}'<#else>''</#if>);
+</script>
+</#if>
+<!-- END 编辑状态进入页面时候填充数据 -->
+<script>
+
+	/* var offset = 10; 
+	var hash = globalHash; 
+	if (hash) {
+		scrollBodyTopTo($("div#c_"+hash).offset().top-offset); 
+	}  */
+	function scrollBodyTopTo(pos) {
+		$("html,body").animate({scrollTop:pos}); 
+	}
+	
+	var trainningTree = function() {
+		$("#tranningTree").jstree({
+			"core" : {
+				"themes" : {
+					"responsive" : false
+				},
+				// so that create works
+				"check_callback" : true,
+				'data' : {
+					'url' : function(node) {
+						return '${BASEPATH}/trainning/mainList';
+					},
+					'data' : function(node) {
+						//alert(node.id);
+						return {
+							'parent' : node.id
+						};
+					}
+
+				}
+			},
+			"types" : {
+				"default" : {
+					"icon" : "fa fa-folder icon-state-warning icon-lg"
+				},
+				"file" : {
+					"icon" : "fa fa-file icon-state-warning icon-lg"
+				}
+			},
+			"state" : {
+				"key" : "demo2"
+			},
+			"contextmenu":{
+				"items":{
+					"Create":{
+						"label":"新建文件夹",
+						"action" :function (data){
+							var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+							showFolderWindow(false,obj);
+						},
+						"icon":"icon-magnifier-add",
+						"_disabled"   : function (obj) { },
+						"separator_after":"true",
+					},
+					"edit":{
+						"label":"修改文件夹",
+						"action" :"icon-magnifier-remove",
+						"icon":"icon-note",
+						"_disabled"   : function (obj) { },
+						"separator_after":"true",
+					},
+					"delete":{
+						"label":"删除文件夹",
+						"action" :"",
+						"icon":"icon-magnifier-remove",
+						"_disabled"   : function (obj) { },
+						"separator_after":"true",
+					}
+				}
+			},
+			"plugins" : [ "contextmenu", "dnd", "state", "types", "search" ,"sort"]
+
+		});
+		
+		//培训树的搜索
+		var to = false;
+		$('#nodeSearch').keyup(function() {
+			if (to) {
+				clearTimeout(to);
+			}
+			to = setTimeout(function() {
+				var v = $('#nodeSearch').val();
+				$('#tranningTree').jstree(true).search(v);
+			}, 250);
+		});
+	}
+
+	function customContextmenu(){
+		$("#trainning").jstree({
+			
+		});
+	}
+	
+	function showFolderWindow(isUpdate,selectNode){
+// 		alert(selectNode["id"]);
+		if (isUpdate){
+			$("#hf_folderid").attr("value", selectNode["id"]);
+		}
+// 		alert(selectNode["text"]);
+	   $("#hf_parentid").attr("value", selectNode["id"]);
+	   alert($('#hf_parentid').val());
+		var tt = $(window).height() - $('#folder_modal .modal-content').height();
+		$('#folder_modal .modal-dialog').css('margin-top', tt/2 + 'px');
+		$("#folder_modal").modal('show');
+
+	}
+	
+    function saveFolder(node) {
+//         if ($('#folder_form').validate().form()) {
+//        		var hf_folderid = $('#hf_folderid').val();
+        	$.ajax({
+                type: 'POST',
+                url: '${BASEPATH}trainning/saveFolder',
+                data: {
+                    id: $('#hf_folderid').val(),
+                    folderName: $('#folderName').val(),
+                    parentId:$('#hf_parentid').val(),
+                },
+                beforeSend:function() {
+                },
+                complete:function(){
+                },
+                success: function(data) {
+                	alert(datab);
+                	var dataObj = eval("(" + data + ")");
+                	//alert(dataObj['user']['nickname']);
+                	
+                    if (dataObj['status'] == 0) {
+                        //alert("数据保存成功！");
+                        window.location.href = '${BASEPATH}user/list';
+                    } else {
+                    	Smartweb.alert({
+                            type: 'danger',
+                            icon: 'warning',
+                            message: dataObj['errmsg'],
+                            place: 'prepend'
+                        });
+                    }
+                },
+                error: function(data) {
+                  alert(JSON.stringify(data));
+                  if (data.status == 401) {
+                    //window.location.href = '';
+                  } else if(data.status == 500) {
+                    alert('服务器无法响应，可能是会话失效，请尝试重新登录');
+                    //window.location.href = '';
+                  } else {
+                    alert(JSON.stringify(data));
+                  }
+                }
+              });  		
+//      	}
+    }
+	
+	$(document).ready(function() {
+		$('.theme-panel').addClass('hide');
+		$('#nav').onePageNav();
+		//初始化树
+		trainningTree();
+       	$('#page_name').text('编写教材');
+       	$('#page_caption').text('培训／编写教材');
+	});
+</script>
+</#macro>
