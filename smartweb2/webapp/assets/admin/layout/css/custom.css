@@ -1,4 +1,35 @@
+.modal-title i {
+	font-size: 17px !important;
+}
 
+/***
+jstree style
+***/
+.vakata-context, .vakata-context ul {
+	  border: 1px solid #ddd !important;
+}
+.vakata-context li>a .vakata-contextmenu-sep {
+	margin: 0 .5em 0 0 !important;
+	background: none !important;
+}
+.vakata-context, .vakata-context ul {
+	padding:0 !important;
+	margin:0 !important;
+}
+.vakata-context li>a,
+.vakata-context li>a:hover {
+	box-shadow: none !important;
+}
+.vakata-context-hover,
+.vakata-context li>a:hover {
+	background: #beebff !important;
+}
+
+.page-error pre {
+	border: 0px solid #fff  !important;
+	background-color: none !important;
+	background: none !important;
+}
 
 .modal-footer {
 	border-top: 0px solid #e5e5e5 !important;

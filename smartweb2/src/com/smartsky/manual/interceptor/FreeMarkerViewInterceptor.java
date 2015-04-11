@@ -7,8 +7,8 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.smartsky.manual.common.FireAuthority;
-import com.smartsky.manual.common.RoleType;
+import com.smartsky.common.FireAuthority;
+import com.smartsky.common.RoleType;
 
 public class FreeMarkerViewInterceptor extends HandlerInterceptorAdapter {
 	public void afterCompletion(HttpServletRequest arg0,

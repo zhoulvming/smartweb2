@@ -5,12 +5,29 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring.xml,classpath:spring-mybatis.xml</param-value>
 	</context-param>
+	<context-param>  
+	    <param-name>log4jConfigLocation</param-name>  
+	    <param-value>classpath:log4j.properties</param-value>
+	</context-param>
+	
+<!-- 	<context-param>  
+	    <param-name>log4jConfigLocation</param-name>  
+	    <param-value>classpath:log4j.properties</param-value>
+	</context-param>
+	<context-param>  
+    	<param-name>log4jRefreshInterval</param-name>  
+	    <param-value>600000</param-value>  
+	</context-param>
+	<context-param>  
+	    <param-name>webAppRootKey</param-name>  
+	    <param-value>myWebApp.root</param-value>  
+	</context-param> -->  
+	
+	<!-- 字符集 过滤器 -->
 	<filter>
-		<description>字符集过滤器</description>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
 		<init-param>
-			<description>字符集编码</description>
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
 		</init-param>
@@ -19,6 +36,8 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- 监听器 -->
 	<listener>
 		<description>spring监听器</description>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -29,6 +48,13 @@
 	<listener>
 		<listener-class>com.smartsky.manual.listeners.SmartRequestContextListener</listener-class>
 	</listener>
+	
+	
+	<!-- <listener>  
+    	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>  
+	</listener> -->   
+	
+	<!-- Spring 分发器,设置MVC配置信息 -->
 	<servlet>
 		<description>spring mvc servlet</description>
 		<servlet-name>springMvc</servlet-name>
@@ -50,4 +76,25 @@
 	<session-config>
 		<session-timeout>15</session-timeout>
 	</session-config>
+	
+	<!-- 异常处理页面 -->
+<!-- 	<error-page>  
+        <error-code>403</error-code>  
+        <location>/views/error/403.jsp</location>  
+    </error-page>  
+    <error-page>  
+        <error-code>404</error-code>  
+        <location>/views/error/404.jsp</location>  
+    </error-page>  
+    <error-page>  
+        <error-code>405</error-code>  
+        <location>/views/error/405.jsp</location>  
+    </error-page>  
+    <error-page>  
+        <error-code>500</error-code>  
+        <location>/views/error/500.jsp</location>  
+    </error-page> -->
+	
+	
+	
 </web-app>

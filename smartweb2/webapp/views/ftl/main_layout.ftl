@@ -73,7 +73,7 @@
 				<div class="portlet layout-portlet">
 					<div id="layout_portlet_title" class="portlet-title">
 						<div class="caption">
-							<i class="icon-home bold font-green"></i>
+							<i id="page_icon" class="icon-home bold font-green"></i>
 							<span id="page_name" class="caption-subject bold uppercase font-green"> 首页</span>
 							<span id="page_caption" class="caption-helper"></span>
 						</div>
@@ -82,7 +82,8 @@
 						</div>
 					</div>
 					<div id="layout_portlet_body" class="portlet-body">
-					<@page_content/>
+					<div class="page-error"></div>
+					<div class="page-success"><@page_content/></div>
 					</div>
 				</div>
 			</div>
@@ -114,6 +115,7 @@
 <script src="${BASEPATH}assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 <script src="${BASEPATH}assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <script src="${BASEPATH}assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<script src="${BASEPATH}assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <script src="${BASEPATH}assets/global/scripts/smartweb.js" type="text/javascript"></script>
 <script src="${BASEPATH}assets/admin/layout/scripts/layout.js" type="text/javascript"></script>

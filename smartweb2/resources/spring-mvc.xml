@@ -15,7 +15,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	<!-- 为了使用json，必须配置 <mvc:annotation-driven/> --> 
 	<mvc:annotation-driven/>
 
-	<!-- 对静态资源文件的访问 -->
+	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理 -->  
 	<mvc:resources mapping="/assets/**" location="/assets/" />
 	
 	<!-- 拦截器 (多个拦截器,顺序执行) -->  
@@ -89,5 +89,18 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 			<value>4096</value>
 		</property>
 	</bean>
+	
+	<!-- <bean id="exceptionResolver" class="com.smartsky.common.exception.ExceptionHandler"/> -->
+	<!-- <bean id="exceptionResolver" class="com.smartsky.common.exception.CustomSimpleMappingExceptionResolver">  
+    	<property name="exceptionMappings">   
+	        <props>   
+	          <prop key="com.smartsky.common.exception.SystemException">error/500</prop>   
+	          <prop key="com.smartsky.common.exception.BusinessException">error/error</prop>
+	          <prop key="java.lang.Exception">error/500</prop>  
+	       </props>   
+     	</property>
+     	表示当抛出异常但没有在exceptionMappings里面找到对应的异常时 返回名叫exception的视图
+     	<property name="defaultErrorView" value="error/error"/>  
+	</bean> -->  
 
 </beans>

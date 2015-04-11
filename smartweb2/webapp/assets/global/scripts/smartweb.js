@@ -571,6 +571,11 @@ var Smartweb = function() {
     // handle sidebar status
     var handleSidebarStatus = function() {
     	
+    	//if error page, do nothing
+    	if (pathinfo.indexOf('error') > 0) {
+    		return ;
+    	}
+    	
     	// get current menulink tag by request url info
     	var fullinfo = basePath + pathinfo.substring(1);
     	var curr = $('.page-sidebar-menu').find('a[href="' + fullinfo +'"]');
@@ -840,6 +845,19 @@ var Smartweb = function() {
         stopPageLoading: function() {
             $('.page-loading, .page-spinner-bar').remove();
         },
+        
+        alert_dialog: function(options, cb) {
+        	options = $.extend(true, {type: 'info', title: '', message: '错误信息'}, options);
+        	var info_btn = {info: {label: "确定", className: "green", callback: cb}};
+        	var warning_btn = {warning: {label: "确定", className: "yellow", callback: cb}};
+        	var error_btn = {error: {label: "确定", className: "red", callback: cb}};
+        	
+        	bootbox.dialog({
+                message: options.message,
+                title: options.title,
+                buttons: eval(options.type + '_btn')
+            });
+        },
 
         alert: function(options) {
 
@@ -855,12 +873,12 @@ var Smartweb = function() {
                 icon: "" // put icon before the message
             }, options);
 
-            var id = Smartweb.getUniqueID("Metronic_alert");
+            var id = Smartweb.getUniqueID("Smartweb_alert");
 
-            var html = '<div id="' + id + '" class="Metronic-alerts alert alert-' + options.type + ' fade in">' + (options.close ? '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>' : '') + (options.icon !== "" ? '<i class="fa-lg fa fa-' + options.icon + '"></i>  ' : '') + options.message + '</div>';
+            var html = '<div id="' + id + '" class="Smartweb-alerts alert alert-' + options.type + ' fade in">' + (options.close ? '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>' : '') + (options.icon !== "" ? '<i class="fa-lg fa fa-' + options.icon + '"></i>  ' : '') + options.message + '</div>';
 
             if (options.reset) {
-                $('.Metronic-alerts').remove();
+                $('.Smartweb-alerts').remove();
             }
 
             if (!options.container) {
@@ -1037,6 +1055,25 @@ var Smartweb = function() {
             };
 
             return sizes[size] ? sizes[size] : 0; 
+        },
+        
+        displayAjaxPageError: function(errmsg) {
+        	$('#page_icon').attr('class', 'icon-cup bold font-red');
+        	$('#page_name').text('出错啦');
+        	$('#page_name').attr('class', 'caption-subject bold uppercase font-red');
+        	$('#page_caption').text('');
+        	$('.page-success').hide();
+  
+        	var error_html = '<h4>系统发生异常，可能由以下原因引起，请联系系统管理员：</h4>'
+				+ '<div class="portlet solid grey-steel">'
+				+ '    <div class="portlet-body">'
+				+ '		<div class="margin-top-20"></div>'
+				+ '	<div class="scroller" style="height:400px;padding-top:10px">'
+				+ '		<pre class="font-red">' + errmsg + '</pre>'
+				+ '	</div>'
+				+ '	</div>'
+				+ '</div>';
+        	$('.page-error').append(error_html);
         }
     };
 

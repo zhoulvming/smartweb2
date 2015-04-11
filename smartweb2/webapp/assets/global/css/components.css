@@ -4725,7 +4725,7 @@ Portlets
 
 /* Solid colored portlet */
 .portlet.solid {
-  padding: 0 10px 0px 10px;
+  padding: 0 10px 10px 10px;
   border: 0px;
 }
 .portlet.solid > .portlet-title {
