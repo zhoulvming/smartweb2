@@ -34,7 +34,7 @@ public class UserController extends BaseController {
 	public void setUserService(UserServiceI userService) {
 		this.userService = userService;
 	}
-
+	
 	/**
 	 * 用户一览URL
 	 * @return

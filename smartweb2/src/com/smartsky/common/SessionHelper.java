@@ -5,6 +5,6 @@ public class SessionHelper {
 	/**
 	 * manager key
 	 */
-	final public static String UserHandler = "user";
+	final public static String UserHandler = "suser";
 	
 }

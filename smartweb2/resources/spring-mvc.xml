@@ -11,21 +11,30 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
 	<context:component-scan base-package="com.smartsky.manual.controller" />
+	<context:component-scan base-package="com.smartsky.manual.service" />
 	
 	<!-- 为了使用json，必须配置 <mvc:annotation-driven/> --> 
 	<mvc:annotation-driven/>
 
-	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理 -->  
+	<!-- 配置静态资源，直接映射到对应的文件夹，不被DispatcherServlet处理。否则的话会导致静态资源无法访问 --> 
 	<mvc:resources mapping="/assets/**" location="/assets/" />
 	
 	<!-- 拦截器 (多个拦截器,顺序执行) -->  
-    <mvc:interceptors>    
-        <mvc:interceptor>    
-          <!-- 需要被拦截的路径 (如果不配置或/**,将拦截所有的Controller) -->  
-           <mvc:mapping path="/**" />   
-           <!-- 拦截处理的interceptor -->  
+    <mvc:interceptors>
+    	<!-- 需要被拦截的路径 (如果不配置或/**,将拦截所有的Controller) -->
+		<!-- 
+			/**的意思是所有文件夹及里面的子文件夹
+			/*是所有文件夹，不含子文件夹
+			/是web项目的根目录 
+		-->
+        <!-- <mvc:interceptor>    
+           <mvc:mapping path="/**" />     
            <bean class="com.smartsky.manual.interceptor.FreeMarkerViewInterceptor"></bean>    
-        </mvc:interceptor>    
+        </mvc:interceptor> -->
+		<mvc:interceptor>  
+			<mvc:mapping path="/**" />
+			<bean class="com.smartsky.manual.interceptor.CommonInterceptor"></bean>  
+		</mvc:interceptor> 
     </mvc:interceptors>  
 	
 	
@@ -89,18 +98,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 			<value>4096</value>
 		</property>
 	</bean>
-	
-	<!-- <bean id="exceptionResolver" class="com.smartsky.common.exception.ExceptionHandler"/> -->
-	<!-- <bean id="exceptionResolver" class="com.smartsky.common.exception.CustomSimpleMappingExceptionResolver">  
-    	<property name="exceptionMappings">   
-	        <props>   
-	          <prop key="com.smartsky.common.exception.SystemException">error/500</prop>   
-	          <prop key="com.smartsky.common.exception.BusinessException">error/error</prop>
-	          <prop key="java.lang.Exception">error/500</prop>  
-	       </props>   
-     	</property>
-     	表示当抛出异常但没有在exceptionMappings里面找到对应的异常时 返回名叫exception的视图
-     	<property name="defaultErrorView" value="error/error"/>  
-	</bean> -->  
+
 
 </beans>

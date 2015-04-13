@@ -26,7 +26,7 @@ import com.smartsky.manual.service.ResourceServiceI;
 @RequestMapping("/manage")
 public class ManageController {
 	
-	@RequestMapping(value="/index", method=RequestMethod.GET)
+	@RequestMapping(value="", method=RequestMethod.GET)
 	public String list( HttpServletRequest req) {
 		return "manage/index";
 	}

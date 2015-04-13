@@ -131,6 +131,13 @@
   		LEFT JOIN role ON user_role.role_id=role.id
   </select>
   
+  <select id="selectByUsername" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where name = #{name,jdbcType=VARCHAR}
+  </select>
+  
   
   
 </mapper>

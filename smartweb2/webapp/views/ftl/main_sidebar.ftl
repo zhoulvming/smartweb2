@@ -15,7 +15,7 @@
 				</a>
 				<ul class="sub-menu always-open" style="display:block">
 					<li class="active">
-						<a href="${BASEPATH}manage/index">
+						<a href="${BASEPATH}manage">
 							<i class="icon-grid"></i> 
 							<span class="badge badge-success"> 14 </span>管理
 						</a>

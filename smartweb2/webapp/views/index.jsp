@@ -31,7 +31,7 @@
 <link id="style_color" href="${BASEPATH}assets/admin/layout/css/themes/grey.css" rel="stylesheet" type="text/css"/>
 <link href="${BASEPATH}assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="shortcut icon" href="${BASEPATH}assets/admin/layout/img/favicon.png"/>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
